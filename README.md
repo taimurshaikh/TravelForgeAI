@@ -1,2 +1,2 @@
-# TaleForgeAI
-AI Interactive Short Story Generator
+# TravelForgeAI
+AI Travel Itinerary Generator
