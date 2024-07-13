@@ -6,7 +6,7 @@ import json
 from langgraph.graph import Graph
 
 # Import agent classes
-from .agents import (
+from agents import (
     ResearcherAgent,
     RecommenderAgent,
     ItineraryGeneratorAgent,
@@ -19,6 +19,7 @@ class TravelForgeAgent:
         os.makedirs(self.output_dir, exist_ok=True)
 
     def run(self, user_form_submission: Dict[str, str]):
+        print("Running TravelForgeAgent...")
         # Initialize agents
         researcher = ResearcherAgent()
         recommender = RecommenderAgent()
@@ -42,8 +43,9 @@ class TravelForgeAgent:
 
         # Compile the graph
         graph = graph_builder.compile()
-
+        print("Graph compiled successfully!")
         # Run the graph
+        print("Running the graph with user form submission...", user_form_submission)
         res = graph.invoke(user_form_submission)
 
         # Write the output to the output directory
@@ -51,20 +53,3 @@ class TravelForgeAgent:
             f.write(json.dumps(res, indent=4))
 
         return res
-
-
-# Test the TravelForge class
-travel_forge = TravelForgeAgent()
-res = travel_forge.run(
-    {
-        "city": "Paris",
-        "country": "France",
-        "time_range": "7 days",
-        "budget": "cheap",
-        "accomodation_type": "hotel",
-        "num_days": 7,
-        "interests": ["museums", "parks", "shopping"],
-    }
-)
-
-print(res)

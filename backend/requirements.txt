@@ -1,6 +1,13 @@
+celery==5.4.0
+fastapi==0.111.0
+httptools==0.6.1
 langchain-community==0.2.7
 langgraph==0.1.5
 openai==1.35.13
 pip-chill==1.0.3
 python-dotenv==1.0.1
+redis==5.0.7
 tavily-python==0.3.3
+uvloop==0.19.0
+watchfiles==0.22.0
+websockets==12.0

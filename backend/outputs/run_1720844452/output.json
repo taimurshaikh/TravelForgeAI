@@ -1,0 +1,194 @@
+{
+    "city": "Paris",
+    "country": "France",
+    "time_range": "summer",
+    "budget": "cheap",
+    "accomodation_type": "hotel",
+    "num_days": 3,
+    "interests": [
+        "museums",
+        "parks"
+    ],
+    "research_results": [
+        [
+            {
+                "title": "31 Top-Rated Tourist Attractions in Paris | PlanetWare",
+                "url": "https://www.planetware.com/tourist-attractions-/paris-f-p-paris.htm",
+                "content": "Throughout the year, events to honor national holidays are held at the Arc de Triomphe, including the November 11th (anniversary of the Armistice of 1918) ceremony commemorating those who perished in the war; the May 8th F\u00eate de la Victoire (Victory Day) celebrating the end of WWII, and the liberation from Nazi occupation; as well as festivities for July 14th (Bastille Day).\n Other masterpieces of the Louvre include the ancient V\u00e9nus de Milo sculpture; the monumental Victoire de Samothrace of the Hellenistic period; the immense Wedding Feast at Cana painting by Veronese (1563); Sandro Botticelli's Venus and the Three Graces fresco; and Liberty Leading the People (1831) by Eug\u00e8ne Delacroix, depicting the Parisian uprising of July 1830.\n From the top of the monument, a viewing terrace affords a panoramic outlook onto the 12 avenues that radiate from the Place de l'\u00c9toile, including the route from the Avenue des Champs-Elys\u00e9es to the Place de la Concorde and the Louvre. Artistic treasures are found throughout the gardens, such as the picturesque 17th-century Fontaine M\u00e9dicis, a fountain basin nestled under trees opposite the east front of the Palais du Luxembourg, which today is used by the French state as the seat of the Senate.\n Currently, the interior of the cathedral (including the towers) and the space immediately in front of the cathedral (on the Parvis Notre-Dame) are closed to the public.",
+                "score": 0.9851,
+                "raw_content": null
+            }
+        ],
+        [
+            {
+                "title": "Things to do in Paris this summer - Time Out",
+                "url": "https://www.timeout.com/paris/en/things-to-do/paris-in-summer-full-list",
+                "content": "Film. Drama. The free open air Festival Silhouette is the biggest short film festival in Paris, and, having been around since 2002, has built up quite a following. For nine days you can expect to ...",
+                "score": 0.98979,
+                "raw_content": null
+            }
+        ],
+        [
+            {
+                "title": "11 Best Affordable Hotels in Paris - Travel + Leisure",
+                "url": "https://www.travelandleisure.com/hotels-resorts/best-cheap-hotels-in-paris",
+                "content": "Key Specs\nNotable Amenities\nRestaurant and bar, live concerts, spa cabins with hot tubs and sensory showers\nHotel Description\nChouchou opened in the fall of 2020, and it quickly cemented itself as one of the coolest hangout spots in the Ninth Arrondissement. A French-style buffet breakfast is served every morning (children under 10 eat free), while complimentary madeleines, tea, coffee, and hot chocolate are served in the winter garden each day from 11 a.m. to 6 p.m.\nH\u00f4tel Saint-Marc\nWhy We Chose It\nWith a stellar location and luxe amenities, H\u00f4tel Saint-Marc feels far more expensive than it actually is.\n Key Specs\nNotable Amenities\nFree coffee and tea in every room, minibars with complimentary soft drinks, laundry service\nHotel Description\nThis four-star hotel is just a quick walk from the Louvre and Jardin du Palais-Royal, but it has plenty of amenities that will make you want to linger before venturing out. Key Specs\nNotable Amenities\nHonesty bar, hammam and massage room, complimentary afternoon tea\nHotel Description\nThis boutique four-star hotel is located in the heart of the Latin Quarter, a quaint Fifth Arrondissement neighborhood filled with bookstores and cafes. Key Specs\nNotable Amenities\nRooftop sauna and hot tub, Nespresso machines, fitness center\nHotel Description\nThis building in the 15th Arrondissement was once home to a rather unremarkable budget hotel, but it received a cool, retro makeover and reopened as H\u00f4tel Wallace in late 2021.",
+                "score": 0.98588,
+                "raw_content": null
+            }
+        ],
+        [
+            {
+                "title": "The 10 Best Small Museums in Paris: Local Gems",
+                "url": "https://www.parisunlocked.com/best-of-paris/small-museums-in-paris-best/",
+                "content": "Once you've seen the Louvre & the Orsay, there are many small museums in Paris that merit a visit. These are 10 of the best- & many are free.",
+                "score": 0.98632,
+                "raw_content": null
+            }
+        ],
+        [
+            {
+                "title": "THE 10 BEST Paris Parks (Updated 2024) - Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attractions-g187147-Activities-c57-t70-Paris_Ile_de_France.html",
+                "content": "Top Paris Parks: See reviews and photos of Parks in Paris, France on Tripadvisor.",
+                "score": 0.98506,
+                "raw_content": null
+            }
+        ]
+    ],
+    "recommendations": [
+        {
+            "id": 1,
+            "title": "Explore the Louvre Museum",
+            "description": "Home to some of the world's most famous art pieces including the Mona Lisa and the Venus de Milo, the Louvre is a must-visit for art enthusiasts.",
+            "reasoning": "The Louvre offers a wealth of artistic treasures and is an ideal destination for museum lovers on a budget as it provides extensive collections all under one roof."
+        },
+        {
+            "id": 2,
+            "title": "Visit Jardin du Luxembourg",
+            "description": "A stunning park in the heart of Paris featuring beautiful gardens, fountains, and sculptures. Perfect for a leisurely stroll or a picnic.",
+            "reasoning": "As a park enthusiast, you will appreciate the serene environment and picturesque landscapes that provide a perfect escape from the bustling city. Plus, it's free to enter."
+        },
+        {
+            "id": 3,
+            "title": "Discover the Mus\u00e9e d\u2019Orsay",
+            "description": "Housed in a former railway station, this museum boasts an impressive collection of impressionist and post-impressionist masterpieces.",
+            "reasoning": "A great alternative to the Louvre, especially if you enjoy smaller, more specialized museums. The Mus\u00e9e d\u2019Orsay will enchant you with incredible works by artists like Monet and Van Gogh."
+        },
+        {
+            "id": 4,
+            "title": "Experience the Festival Silhouette",
+            "description": "This free open-air short film festival allows you to enjoy films under the stars over a span of nine days, making for a unique cultural experience.",
+            "reasoning": "Since you are visiting Paris in the summer, this free festival is a fantastic way to experience local culture and entertainment without breaking the bank."
+        },
+        {
+            "id": 5,
+            "title": "Stroll Through the Parc des Buttes-Chaumont",
+            "description": "One of Paris' largest parks, featuring a man-made lake, waterfalls, and beautiful views. Perfect for long walks and outdoor relaxation.",
+            "reasoning": "As an admirer of parks, this location provides an expansive natural setting combined with stunning artificial landscaping, all at no cost."
+        },
+        {
+            "id": 6,
+            "title": "Marvel at the Artistic Treasures at Palais du Luxembourg",
+            "description": "In addition to its political significance, the gardens here are filled with picturesque fountains and statues, offering another beautiful and free park to explore.",
+            "reasoning": "The gardens of Palais du Luxembourg combine your interests in both historic sites and lush parks, making it an enticing visit."
+        },
+        {
+            "id": 7,
+            "title": "Tour the Small Museums of Paris",
+            "description": "Visit small but impressive museums like the Mus\u00e9e de l'Orangerie and Mus\u00e9e Rodin which often have lower entry fees and provide a more intimate experience.",
+            "reasoning": "To maximize your museum visits on a budget, these small museums can provide unique and enriching experiences without the crowds and high costs typical of larger institutions."
+        },
+        {
+            "id": 8,
+            "title": "Walk Along the Promenade Plant\u00e9e",
+            "description": "A beautiful elevated park built on a disused railway line, this linear park offers a unique perspective of Paris and is perfect for a scenic walk.",
+            "reasoning": "Combining your interests in parks and unique places, this elevated green walkway allows you to see the city from a different angle."
+        }
+    ],
+    "itinerary": [
+        {
+            "day": 1,
+            "recommended_activities": [
+                {
+                    "id": 1,
+                    "title": "Explore the Louvre Museum",
+                    "description": "Home to some of the world's most famous art pieces including the Mona Lisa and the Venus de Milo, the Louvre is a must-visit for art enthusiasts.",
+                    "reasoning": "The Louvre offers a wealth of artistic treasures and is an ideal destination for museum lovers on a budget as it provides extensive collections all under one roof."
+                }
+            ]
+        },
+        {
+            "day": 2,
+            "recommended_activities": [
+                {
+                    "id": 2,
+                    "title": "Visit Jardin du Luxembourg",
+                    "description": "A stunning park in the heart of Paris featuring beautiful gardens, fountains, and sculptures. Perfect for a leisurely stroll or a picnic.",
+                    "reasoning": "As a park enthusiast, you will appreciate the serene environment and picturesque landscapes that provide a perfect escape from the bustling city. Plus, it's free to enter."
+                },
+                {
+                    "id": 6,
+                    "title": "Marvel at the Artistic Treasures at Palais du Luxembourg",
+                    "description": "In addition to its political significance, the gardens here are filled with picturesque fountains and statues, offering another beautiful and free park to explore.",
+                    "reasoning": "The gardens of Palais du Luxembourg combine your interests in both historic sites and lush parks, making it an enticing visit."
+                }
+            ]
+        },
+        {
+            "day": 3,
+            "recommended_activities": [
+                {
+                    "id": 3,
+                    "title": "Discover the Mus\u00e9e d\u2019Orsay",
+                    "description": "Housed in a former railway station, this museum boasts an impressive collection of impressionist and post-impressionist masterpieces.",
+                    "reasoning": "A great alternative to the Louvre, especially if you enjoy smaller, more specialized museums. The Mus\u00e9e d\u2019Orsay will enchant you with incredible works by artists like Monet and Van Gogh."
+                }
+            ]
+        },
+        {
+            "day": 4,
+            "recommended_activities": [
+                {
+                    "id": 5,
+                    "title": "Stroll Through the Parc des Buttes-Chaumont",
+                    "description": "One of Paris' largest parks, featuring a man-made lake, waterfalls, and beautiful views. Perfect for long walks and outdoor relaxation.",
+                    "reasoning": "As an admirer of parks, this location provides an expansive natural setting combined with stunning artificial landscaping, all at no cost."
+                }
+            ]
+        },
+        {
+            "day": 5,
+            "recommended_activities": [
+                {
+                    "id": 8,
+                    "title": "Walk Along the Promenade Plant\u00e9e",
+                    "description": "A beautiful elevated park built on a disused railway line, this linear park offers a unique perspective of Paris and is perfect for a scenic walk.",
+                    "reasoning": "Combining your interests in parks and unique places, this elevated green walkway allows you to see the city from a different angle."
+                }
+            ]
+        },
+        {
+            "day": 6,
+            "recommended_activities": [
+                {
+                    "id": 4,
+                    "title": "Experience the Festival Silhouette",
+                    "description": "This free open-air short film festival allows you to enjoy films under the stars over a span of nine days, making for a unique cultural experience.",
+                    "reasoning": "Since you are visiting Paris in the summer, this free festival is a fantastic way to experience local culture and entertainment without breaking the bank."
+                }
+            ]
+        },
+        {
+            "day": 7,
+            "recommended_activities": [
+                {
+                    "id": 7,
+                    "title": "Tour the Small Museums of Paris",
+                    "description": "Visit small but impressive museums like the Mus\u00e9e de l'Orangerie and Mus\u00e9e Rodin which often have lower entry fees and provide a more intimate experience.",
+                    "reasoning": "To maximize your museum visits on a budget, these small museums can provide unique and enriching experiences without the crowds and high costs typical of larger institutions."
+                }
+            ]
+        }
+    ]
+}
