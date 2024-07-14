@@ -3,6 +3,8 @@ from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from langgraph_agent import TravelForgeAgent
 from db import init_db, store_task, get_task
+from middleware import log_requests
+from starlette.middleware.base import BaseHTTPMiddleware
 import uuid
 
 app = FastAPI()
@@ -14,6 +16,7 @@ async def startup_event():
     init_db()
 
 
+app.add_middleware(BaseHTTPMiddleware, dispatch=log_requests)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],
