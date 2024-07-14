@@ -4,18 +4,20 @@ import ItineraryForm from "./components/ItineraryForm";
 import ResultsPage from "./components/ResultsPage";
 import Header from "./components/Header";
 
-function App() {
+const App: React.FC = () => {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+      <div className="min-h-screen flex flex-col bg-gray-100">
         <Header />
-        <Routes>
-          <Route path="/" element={<ItineraryForm />} />
-          <Route path="/results" element={<ResultsPage />} />
-        </Routes>
+        <main className="flex-grow pt-24 pb-8 px-4 max-w-7xl mx-auto w-full">
+          <Routes>
+            <Route path="/" element={<ItineraryForm />} />
+            <Route path="/results/:taskId" element={<ResultsPage />} />
+          </Routes>
+        </main>
       </div>
     </Router>
   );
-}
+};
 
 export default App;

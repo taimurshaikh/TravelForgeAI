@@ -30,7 +30,7 @@ class RecommenderAgent:
         """
 
         user_prompt = f"""
-            I want to travel to {travel_info['city']}, {travel_info['country']} during {travel_info['time_range']} 
+            I want to travel to {travel_info['location']} during {travel_info['time_range']} 
             for {travel_info['time_range']} and has a {travel_info['budget']} budget. I am interested in the following things: {','.join(travel_info['interests'])} 
             I have gathered the following list of search queries and their respective search results for you use as context when generating  recommendations:\n 
             {travel_info['research_results']}
@@ -58,8 +58,6 @@ class RecommenderAgent:
             travel_info["recommendations"] = json.loads(
                 self.generate_recommendations(travel_info)
             )["recommendations"]
-            with open("recommendations.json", "w") as f:
-                f.write(str(travel_info["recommendations"]))
             return travel_info
         except Exception as e:
             print(f"Error during recommendation generation: {e}")

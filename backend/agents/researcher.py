@@ -14,13 +14,13 @@ class ResearcherAgent:
 
     def research_location(self, location_info: dict) -> dict:
         print(location_info)
-        formatted_location = f"{location_info['city']}, {location_info['country']}"
+        formatted_location = f"{location_info['location']}"
 
         # Use Tavily to run some search queries
         search_queries = [
             f"Top tourist attractions in {formatted_location}",
             f"Things to do in {formatted_location} in {location_info['time_range']}",
-            f"Best {location_info['budget']} {location_info['accomodation_type']} in {formatted_location}",
+            f"Best {location_info['budget']} {location_info['accommodation_type']} in {formatted_location}",
         ]
 
         # Specific interests
@@ -36,7 +36,7 @@ class ResearcherAgent:
                     # This ensures variety but also doesn't provide too much noise for downstream agents
                     lambda q: tavily_client.search(
                         query=q,
-                        # search_depth="advanced",
+                        search_depth="advanced",
                         max_results=location_info["num_days"] // 2,
                     ),
                     search_queries,
@@ -51,8 +51,6 @@ class ResearcherAgent:
             travel_info["research_results"] = self.research_location(user_prefs)
             print("Research results:")
             print(travel_info["research_results"])
-            with open("research_results.json", "w") as f:
-                f.write(str(travel_info["research_results"]))
             return travel_info
         except Exception as e:
             print(f"Error during research: {e}")

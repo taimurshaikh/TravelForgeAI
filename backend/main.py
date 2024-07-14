@@ -1,13 +1,18 @@
 from fastapi import FastAPI, BackgroundTasks
 from pydantic import BaseModel
-from celery.result import AsyncResult
 from fastapi.middleware.cors import CORSMiddleware
-from tasks import (
-    generate_itinerary_task,
-    celery_app,
-)  # Import the Celery app from tasks
+from langgraph_agent import TravelForgeAgent
+from db import init_db, store_task, get_task
+import uuid
 
 app = FastAPI()
+
+
+# Initialize the database when the app starts
+@app.on_event("startup")
+async def startup_event():
+    init_db()
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -19,32 +24,33 @@ app.add_middleware(
 
 
 class ItineraryRequest(BaseModel):
-    city: str
-    country: str
+    location: str
     time_range: str
     budget: str
-    accomodation_type: str
+    accommodation_type: str
     num_days: int
     interests: list[str]
 
 
+async def generate_itinerary_background(task_id: str, user_form_submission: dict):
+    tf = TravelForgeAgent()
+    result = tf.run(user_form_submission)
+    store_task(task_id, "SUCCESS", result)
+
+
 @app.post("/generate-itinerary")
-def generate_itinerary(request: ItineraryRequest, background_tasks: BackgroundTasks):
-    print(request.model_dump())
-    task = generate_itinerary_task.delay(request.model_dump())
-    return {"task_id": task.id, "message": "Itinerary generation in progress"}
+async def generate_itinerary(
+    request: ItineraryRequest, background_tasks: BackgroundTasks
+):
+    task_id = str(uuid.uuid4())  # Generate a unique task ID
+    store_task(task_id, "PENDING")
+    background_tasks.add_task(
+        generate_itinerary_background, task_id, request.model_dump()
+    )
+    return {"task_id": task_id, "message": "Itinerary generation in progress"}
 
 
 @app.get("/task-status/{task_id}")
-def get_task_status(task_id: str):
-    task_result = AsyncResult(task_id, app=celery_app)
-    if task_result.state == "PENDING":
-        response = {"state": task_result.state, "status": "Pending..."}
-    elif task_result.state != "FAILURE":
-        response = {"state": task_result.state, "result": task_result.result}
-    else:
-        response = {
-            "state": task_result.state,
-            "status": str(task_result.info),  # Exception info
-        }
-    return response
+async def get_task_status(task_id: str):
+    task_result = get_task(task_id)
+    return task_result or {"state": "NOT_FOUND"}

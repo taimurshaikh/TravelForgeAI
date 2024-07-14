@@ -31,7 +31,7 @@ class ItineraryGeneratorAgent:
         """
 
         user_prompt = f"""
-            The user is travelling to {travel_info['city']}, {travel_info['country']} for {travel_info['time_range']}.
+            The user is travelling to {travel_info['location']} for {travel_info['time_range']}.
 
             Here are the recommendations for the user's trip: {travel_info['recommendations']}
             """
@@ -69,8 +69,6 @@ class ItineraryGeneratorAgent:
             ]
             print("Itinerary:")
             print(travel_info["itinerary"])
-            with open("itinerary.json", "w") as f:
-                f.write(json.dumps(travel_info["itinerary"]))
             return travel_info
         except Exception as e:
             print(f"Error during itinerary generation: {e}")
