@@ -1,0 +1,216 @@
+{
+    "user_form_submission": {
+        "location": "Karachi, Pakistan",
+        "time_range": "Fall",
+        "budget": "cheap",
+        "accommodation_type": "hotel",
+        "num_days": 3,
+        "interests": [
+            "museums",
+            "parks",
+            "shopping"
+        ]
+    },
+    "activity_research_results": [
+        [
+            {
+                "title": "Things to Do in Karachi, Pakistan - Karachi Attractions",
+                "url": "https://www.tripadvisor.com/Attractions-g295414-Activities-Karachi_Sindh_Province.html",
+                "content": "1. Port Grand Pakistan. 340. Shopping Malls. Port Grand is one of the finest developments that celebrates the city of Karachi with diverse concepts in food, art, leisure, entertainment, adventure, fun and shopping, A cultural hub on Pakistan\u2026. 2024. 2.",
+                "score": 0.9857,
+                "raw_content": null
+            }
+        ],
+        [
+            {
+                "title": "Things to Do in Karachi, Pakistan - Karachi Attractions",
+                "url": "https://www.tripadvisor.com/Attractions-g295414-Activities-Karachi_Sindh_Province.html",
+                "content": "where you can enjoy old memories of Pakistan air force airplanes and many more things. 6. Mazar-E-Quaid. 245. Monuments & Statues. This is the monument of the founder of Pakistan Mohammed Ali Jinnah. See way to experience (1) 7. Frere Hall.",
+                "score": 0.98517,
+                "raw_content": null
+            }
+        ],
+        [
+            {
+                "title": "THE 10 BEST Karachi Museums - Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attractions-g295414-Activities-c49-Karachi_Sindh_Province.html",
+                "content": "Jul 6, 2024 - Looking to get inspired on your trip to Karachi? Immerse yourself into world-class art, exciting history, and mind-bending science. Check out the best museums in Karachi to visit in 2024. Book effortlessly online with Tripadvisor!",
+                "score": 0.98511,
+                "raw_content": null
+            }
+        ],
+        [
+            {
+                "title": "Top 22 Best Parks in Karachi | Lovin Pakistan",
+                "url": "https://lovinpakistan.com/parks-in-karachi/",
+                "content": "Nisar Shaheed Park. DHA has one of the best family parks in Karachi and Nisar Shaheed Park is one of them. Located in a peaceful neighborhood with lush green professionally trimmed grasslands. The park has a 1-kilometer-long walking track and a playground with different slides and swings for children. The beauty of this park is further retained ...",
+                "score": 0.98566,
+                "raw_content": null
+            }
+        ],
+        [
+            {
+                "title": "The Best Shopping Destinations in Karachi for Every Budget",
+                "url": "https://lovin.co/karachi/en/shopping/the-best-shopping-destinations-in-karachi-for-every-budget/",
+                "content": "The Forum Mall. The Forum Mall is a modern shopping mall located in the Clifton area, known for its luxury brands and designer boutiques. The mall also has a cinema, food court, and play area for children. Whether you're looking for traditional bazaars or modern shopping malls, Karachi has a range of options that cater to every budget and taste.",
+                "score": 0.98511,
+                "raw_content": null
+            }
+        ]
+    ],
+    "accommodation_research_results": [
+        {
+            "query": "Best cheap hotel in Karachi, Pakistan",
+            "follow_up_questions": null,
+            "answer": null,
+            "images": [
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/e8/99/c8/hotel-mehran-karachi.jpg?w=1200&h=-1&s=1",
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/52/0b/74/another-view-of-days.jpg?w=1200&h=-1&s=1",
+                "https://www.wyndhamhotels.com/content/dam/property-images/en-us/ra/pk/others/karachi/50508/50508_front_exterior_1.jpg",
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/24/9b/85/hotel-exterior.jpg?w=1200&h=-1&s=1",
+                "https://pix10.agoda.net/hotelImages/148828/0/bb52951c3b30a0829c27c6a5a404646b.jpg?s=1024x768"
+            ],
+            "results": [
+                {
+                    "title": "The 10 best cheap hotels in Karachi, Pakistan | Booking.com",
+                    "url": "https://www.booking.com/budget/city/pk/karachi.html",
+                    "content": "Find and book deals on the best cheap hotels in Karachi, Pakistan! Explore guest reviews and book the perfect cheap hotel for your trip.",
+                    "score": 0.98541,
+                    "raw_content": null
+                },
+                {
+                    "title": "THE 10 BEST Cheap Hotels in Karachi 2024 (with Prices) - Tripadvisor",
+                    "url": "https://www.tripadvisor.com/HotelsList-Karachi-Cheap-Hotels-zfp1862550.html",
+                    "content": "Cheap Hotels in Karachi. Comfy stays at affordable prices, with plenty of options in popular neighborhoods. Check In. \u2014 / \u2014 / \u2014.",
+                    "score": 0.98392,
+                    "raw_content": null
+                },
+                {
+                    "title": "16 Best Hotels in Karachi. Hotels from $10/night - KAYAK",
+                    "url": "https://www.kayak.com/Karachi-Hotels.10828.hotel.ksp",
+                    "content": "Looking for Karachi Hotel? 2-star hotels from $10, 3 stars from $12 and 4 stars+ from $58. Stay at Beach Luxury Hotel from $72/night, Hotel island Clifton from $25/night, Hotel Bilal from $10/night and more. Compare prices of 474 hotels in Karachi on KAYAK now.",
+                    "score": 0.97663,
+                    "raw_content": null
+                }
+            ],
+            "response_time": 0.84
+        }
+    ],
+    "activity_recommendations": [
+        {
+            "id": 1,
+            "title": "Visit Port Grand Pakistan",
+            "description": "Explore one of Karachi's premier locations for shopping, food, art, leisure, and entertainment. Port Grand offers a cultural hub that celebrates the essence of Karachi.",
+            "reasoning": "This recommendation is perfect for your shopping interest and provides a dynamic environment to experience a mix of local and international brands."
+        },
+        {
+            "id": 2,
+            "title": "Explore the Pakistan Maritime Museum",
+            "description": "This marvellous museum offers a diverse collection of maritime artifacts, including historic vessels, submarines, and aircraft.",
+            "reasoning": "As someone interested in museums, the Pakistan Maritime Museum provides a unique insight into the maritime history of Pakistan."
+        },
+        {
+            "id": 3,
+            "title": "Spend a Day at Frere Hall",
+            "description": "A historical gem that offers art galleries, lush gardens, and a sense of Karachi's colonial past. Frere Hall is both enlightening and relaxing.",
+            "reasoning": "Combines your interest in parks and museums. Enjoy art exhibitions while taking a stroll through beautiful gardens."
+        },
+        {
+            "id": 4,
+            "title": "Relax at Nisar Shaheed Park",
+            "description": "Located in a serene neighborhood, this park features professionally trimmed grasslands, a walking track, and children's playgrounds. Ideal for a peaceful escape.",
+            "reasoning": "Perfect for your interest in parks, offering a tranquil atmosphere suitable for both a leisurely walk and family time."
+        },
+        {
+            "id": 5,
+            "title": "Shop at The Forum Mall",
+            "description": "A modern shopping destination with luxury brands, designer boutiques, a cinema, food court, and play area. Located in the upscale Clifton area.",
+            "reasoning": "Caters to your shopping interests. The mall's variety ensures that you can find products within a range of budgets, from luxury to affordable."
+        },
+        {
+            "id": 6,
+            "title": "Visit Mazar-E-Quaid",
+            "description": "This mausoleum holds the tomb of Muhammad Ali Jinnah, the founder of Pakistan. It stands as a national symbol and offers a serene environment for reflection.",
+            "reasoning": "A significant historical site that connects you with Pakistan's rich heritage, fulfilling your interest in monuments and historical sites."
+        },
+        {
+            "id": 7,
+            "title": "Wander around Empress Market",
+            "description": "One of Karachi's oldest markets, offering a plethora of goods ranging from fresh produce to handicrafts and antiques.",
+            "reasoning": "For a unique shopping experience, Empress Market provides a glimpse into the local culture and everyday life in Karachi."
+        }
+    ],
+    "accommodation_recommendations": [
+        {
+            "name": "Beach Luxury Hotel",
+            "link": "https://www.kayak.com/Karachi-Hotels-Beach-Luxury-Hotel.10828.hotel.ksp"
+        },
+        {
+            "name": "Hotel island Clifton",
+            "link": "https://www.kayak.com/Karachi-Hotels-Hotel-island-Clifton.10828.hotel.ksp"
+        },
+        {
+            "name": "Hotel Bilal",
+            "link": "https://www.kayak.com/Karachi-Hotels-Hotel-Bilal.10828.hotel.ksp"
+        }
+    ],
+    "itinerary": [
+        {
+            "day": 1,
+            "recommended_activities": [
+                {
+                    "id": 1,
+                    "title": "Visit Port Grand Pakistan",
+                    "description": "Explore one of Karachi's premier locations for shopping, food, art, leisure, and entertainment. Port Grand offers a cultural hub that celebrates the essence of Karachi.",
+                    "reasoning": "This recommendation is perfect for your shopping interest and provides a dynamic environment to experience a mix of local and international brands."
+                },
+                {
+                    "id": 6,
+                    "title": "Visit Mazar-E-Quaid",
+                    "description": "This mausoleum holds the tomb of Muhammad Ali Jinnah, the founder of Pakistan. It stands as a national symbol and offers a serene environment for reflection.",
+                    "reasoning": "A significant historical site that connects you with Pakistan's rich heritage, fulfilling your interest in monuments and historical sites."
+                },
+                {
+                    "id": 7,
+                    "title": "Wander around Empress Market",
+                    "description": "One of Karachi's oldest markets, offering a plethora of goods ranging from fresh produce to handicrafts and antiques.",
+                    "reasoning": "For a unique shopping experience, Empress Market provides a glimpse into the local culture and everyday life in Karachi."
+                }
+            ]
+        },
+        {
+            "day": 2,
+            "recommended_activities": [
+                {
+                    "id": 2,
+                    "title": "Explore the Pakistan Maritime Museum",
+                    "description": "This marvellous museum offers a diverse collection of maritime artifacts, including historic vessels, submarines, and aircraft.",
+                    "reasoning": "As someone interested in museums, the Pakistan Maritime Museum provides a unique insight into the maritime history of Pakistan."
+                },
+                {
+                    "id": 3,
+                    "title": "Spend a Day at Frere Hall",
+                    "description": "A historical gem that offers art galleries, lush gardens, and a sense of Karachi's colonial past. Frere Hall is both enlightening and relaxing.",
+                    "reasoning": "Combines your interest in parks and museums. Enjoy art exhibitions while taking a stroll through beautiful gardens."
+                },
+                {
+                    "id": 4,
+                    "title": "Relax at Nisar Shaheed Park",
+                    "description": "Located in a serene neighborhood, this park features professionally trimmed grasslands, a walking track, and children's playgrounds. Ideal for a peaceful escape.",
+                    "reasoning": "Perfect for your interest in parks, offering a tranquil atmosphere suitable for both a leisurely walk and family time."
+                }
+            ]
+        },
+        {
+            "day": 3,
+            "recommended_activities": [
+                {
+                    "id": 5,
+                    "title": "Shop at The Forum Mall",
+                    "description": "A modern shopping destination with luxury brands, designer boutiques, a cinema, food court, and play area. Located in the upscale Clifton area.",
+                    "reasoning": "Caters to your shopping interests. The mall's variety ensures that you can find products within a range of budgets, from luxury to affordable."
+                }
+            ]
+        }
+    ]
+}

@@ -30,10 +30,11 @@ class ItineraryGeneratorAgent:
         makes sense to do on that particular day. You can include a brief but well-written, light-hearted explanation of why the activity was placed on that day if you desire.
         """
 
+        user_prefs = travel_info["user_form_submission"]
         user_prompt = f"""
-            The user is travelling to {travel_info['location']} for {travel_info['time_range']}.
+            The user is travelling to {user_prefs['location']} for {user_prefs['num_days']} days during {user_prefs['time_range']}.
 
-            Here are the recommendations for the user's trip: {travel_info['recommendations']}
+            Here are the recommendations for the user's trip: {travel_info['activity_recommendations']}
             """
 
         response = client.chat.completions.create(
@@ -49,7 +50,6 @@ class ItineraryGeneratorAgent:
         )
 
         res = response.choices[0].message.content
-        print(res)
         return res
 
     def run(self, travel_info):
@@ -61,7 +61,7 @@ class ItineraryGeneratorAgent:
                     "day": itinerary_day["day"],
                     "recommended_activities": [
                         rec
-                        for rec in travel_info["recommendations"]
+                        for rec in travel_info["activity_recommendations"]
                         if rec["id"] in itinerary_day["recommended_activity_ids"]
                     ],
                 }

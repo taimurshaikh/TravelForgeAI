@@ -35,8 +35,6 @@ const ItineraryForm: React.FC = () => {
   });
   const [errors, setErrors] = useState<Errors>({});
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [isGoogleApiAvailable, setIsGoogleApiAvailable] =
-    useState<boolean>(false);
 
   const navigate = useNavigate();
 
@@ -57,6 +55,19 @@ const ItineraryForm: React.FC = () => {
     const newInterests = [...formData.interests];
     newInterests[index] = value.trim();
     setFormData((prev) => ({ ...prev, interests: newInterests }));
+  };
+
+  const mapBudgetToTerm = (budget: string): string => {
+    switch (budget) {
+      case "$":
+        return "cheap";
+      case "$$":
+        return "medium";
+      case "$$$":
+        return "luxury";
+      default:
+        return "";
+    }
   };
 
   const validateForm = (): boolean => {
@@ -89,9 +100,11 @@ const ItineraryForm: React.FC = () => {
       const validInterests = formData.interests.filter(
         (interest) => interest.trim() !== ""
       );
+      const mappedBudget = mapBudgetToTerm(formData.budget);
       console.log("Submitting form with data", {
         ...formData,
         interests: validInterests,
+        budget: mappedBudget,
       });
       const response = await axios.post(
         "http://127.0.0.1:8000/generate-itinerary",
@@ -99,11 +112,11 @@ const ItineraryForm: React.FC = () => {
           ...formData,
           location: formData.location ?? "",
           interests: validInterests,
+          budget: mappedBudget,
         }
       );
       const { task_id } = response.data;
       navigate(`/results/${task_id}`);
-      //navigate("/results", { state: { taskId: task_id } });
     } catch (error) {
       console.error("There was an error submitting the form!", error);
       setErrors((prev) => ({

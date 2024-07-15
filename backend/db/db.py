@@ -37,3 +37,11 @@ def get_task(task_id):
             "result": json.loads(task[2]) if task[2] else None,
         }
     return None
+
+
+def drop_db():
+    conn = sqlite3.connect("tasks.db")
+    c = conn.cursor()
+    c.execute("DROP TABLE tasks")
+    conn.commit()
+    conn.close()

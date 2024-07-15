@@ -1,18 +1,18 @@
+from contextlib import asynccontextmanager
 from fastapi import FastAPI, BackgroundTasks
-from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from langgraph_agent import TravelForgeAgent
-from db import init_db, store_task, get_task
+from db.db import init_db, store_task, get_task, drop_db
 from middleware import log_requests
 from starlette.middleware.base import BaseHTTPMiddleware
+from schemas import ItineraryRequest
 import uuid
 
 app = FastAPI()
 
 
-# Initialize the database when the app starts
 @app.on_event("startup")
-async def startup_event():
+async def startup():
     init_db()
 
 
@@ -24,15 +24,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-
-class ItineraryRequest(BaseModel):
-    location: str
-    time_range: str
-    budget: str
-    accommodation_type: str
-    num_days: int
-    interests: list[str]
 
 
 async def generate_itinerary_background(task_id: str, user_form_submission: dict):
