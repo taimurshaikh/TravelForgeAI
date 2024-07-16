@@ -7,7 +7,7 @@ export default function Map() {
   const map = useRef(null);
   const tokyo = { lng: 2.294481, lat: 48.858372 };
   const [zoom] = useState(14);
-  maptilersdk.config.apiKey = 'Czlrri2nbyZ5CTLnkHC0';
+  maptilersdk.config.apiKey = 'MY-API-KEY'; // NOTE: Put this in an old commit, but reprovisioned the key
 
   useEffect(() => {
     if (map.current) return; // stops map from intializing more than once

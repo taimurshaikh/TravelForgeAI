@@ -12,7 +12,7 @@ class MapperAgent:
         nlp = spacy.load("en_core_web_sm")
 
         # MapTiler API key (replace with your actual key)
-        MAPTILER_API_KEY = "Czlrri2nbyZ5CTLnkHC0"
+        MAPTILER_API_KEY = "MY-MAPTILER-API-KEY"  # NOTE: put this in an old commit, but reprovisioned the key
         # Extract place names using NER
         doc = nlp(input_data["text"])
         print([e.label_ for e in doc.ents])
