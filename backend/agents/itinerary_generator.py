@@ -52,7 +52,7 @@ class ItineraryGeneratorAgent:
         res = response.choices[0].message.content
         return res
 
-    def run(self, travel_info):
+    def run(self, travel_info: dict) -> dict:
         try:
             res = json.loads(self.generate_itinerary(travel_info))["itinerary"]
             # get the recommendations corresponding to the ids in the itinerary
@@ -67,7 +67,7 @@ class ItineraryGeneratorAgent:
                 }
                 for itinerary_day in res
             ]
-            print(travel_info)
+            print("Itinerary Generated!")
             return travel_info
         except Exception as e:
             print("Error in ItineraryGeneratorAgent: ", e)

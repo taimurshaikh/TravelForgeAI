@@ -6,6 +6,14 @@ interface ExpandedAccommodationCardProps {
   onClose: () => void;
 }
 
+/**
+ * ExpandedAccommodationCard component displays detailed information about a specific accommodation.
+ *
+ * @param {ExpandedAccommodationCardProps} props - The component props
+ * @param {Accommodation} props.accommodation - The accommodation details to display
+ * @param {() => void} props.onClose - Function to call when closing the expanded card
+ * @returns {JSX.Element} The rendered ExpandedAccommodationCard component
+ */
 const ExpandedAccommodationCard: React.FC<ExpandedAccommodationCardProps> = ({
   accommodation,
   onClose,
@@ -41,6 +49,7 @@ const ExpandedAccommodationCard: React.FC<ExpandedAccommodationCardProps> = ({
         {accommodation.image ? (
           <img
             src={accommodation.image}
+            alt={`Image of ${accommodation.name}`}
             className="object-cover w-full h-full"
           />
         ) : (
@@ -64,7 +73,12 @@ const ExpandedAccommodationCard: React.FC<ExpandedAccommodationCardProps> = ({
 
     <div>
       <span className="font-semibold">
-        <a className="no_underline hover:underline" href={accommodation.link}>
+        <a
+          className="no_underline hover:underline"
+          href={accommodation.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {accommodation.link}
         </a>
       </span>

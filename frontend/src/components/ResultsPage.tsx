@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import ItineraryCard from "@components/ItineraryCard";
 import AccommodationCard from "@components/AccommodationCard";
@@ -9,24 +9,39 @@ import ErrorScreen from "@components/ErrorScreen";
 import useTaskResults from "@hooks/useTaskResults";
 import { StylizedButton } from "./StylizedButton";
 
+/**
+ * ResultsPage component displays the generated itinerary and accommodation recommendations.
+ * @returns {JSX.Element} The rendered ResultsPage component
+ */
 const ResultsPage: React.FC = () => {
   const { taskId } = useParams<{ taskId: string }>();
   const { loading, result, error } = useTaskResults(taskId);
-  const [expandedDay, setExpandedDay] = React.useState<number | null>(null);
-  const [expandedAccommodation, setExpandedAccommodation] = React.useState<
+  const [expandedDay, setExpandedDay] = useState<number | null>(null);
+  const [expandedAccommodation, setExpandedAccommodation] = useState<
     string | null
   >(null);
 
+  /**
+   * Handles the click event on an itinerary card.
+   * @param {number} day - The day number of the clicked itinerary card
+   */
   const handleCardClick = (day: number) => {
     setExpandedDay(day);
     setExpandedAccommodation(null);
   };
 
+  /**
+   * Handles the click event on an accommodation card.
+   * @param {string} name - The name of the clicked accommodation
+   */
   const handleAccommodationClick = (name: string) => {
     setExpandedAccommodation(name);
     setExpandedDay(null);
   };
 
+  /**
+   * Closes the expanded card view.
+   */
   const handleCardClose = () => {
     setExpandedDay(null);
     setExpandedAccommodation(null);
@@ -64,35 +79,31 @@ const ResultsPage: React.FC = () => {
               Daily Schedule
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              {result?.result.itinerary?.map(function (item) {
-                return (
-                  <ItineraryCard
-                    key={item.day}
-                    item={item}
-                    onClick={() => handleCardClick(item.day)}
-                  />
-                );
-              })}
+              {result.result.itinerary?.map((item) => (
+                <ItineraryCard
+                  key={item.day}
+                  item={item}
+                  onClick={() => handleCardClick(item.day)}
+                />
+              ))}
             </div>
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">
               Suggested Accommodations
             </h3>
             <div className="grid grid-cols-1 gap-6 mb-8">
-              {result?.result.accomm_recs?.map((accommodation, index) => {
-                return (
-                  <AccommodationCard
-                    key={index}
-                    accommodation={accommodation}
-                    onClick={() => handleAccommodationClick(accommodation.name)}
-                  />
-                );
-              })}
+              {result.result.accomm_recs?.map((accommodation, index) => (
+                <AccommodationCard
+                  key={index}
+                  accommodation={accommodation}
+                  onClick={() => handleAccommodationClick(accommodation.name)}
+                />
+              ))}
             </div>
           </div>
 
           {/* Right sector: Expanded Card (Itinerary or Accommodation) */}
           <div className="w-full lg:w-1/2 bg-white rounded-lg shadow-md min-h-[500px] flex items-center justify-center">
-            {expandedDay && result?.result.itinerary ? (
+            {expandedDay && result.result.itinerary ? (
               <ExpandedItineraryCard
                 item={
                   result.result.itinerary.find(
@@ -101,7 +112,7 @@ const ResultsPage: React.FC = () => {
                 }
                 onClose={handleCardClose}
               />
-            ) : expandedAccommodation && result?.result.accomm_recs ? (
+            ) : expandedAccommodation && result.result.accomm_recs ? (
               <ExpandedAccommodationCard
                 accommodation={
                   result.result.accomm_recs.find(

@@ -2,10 +2,23 @@ import React from "react";
 import { Tooltip } from "react-tooltip";
 import { ItineraryItem } from "../types";
 
-const ExpandedItineraryCard: React.FC<{
+interface ExpandedItineraryCardProps {
   item: ItineraryItem;
   onClose: () => void;
-}> = ({ item, onClose }) => (
+}
+
+/**
+ * ExpandedItineraryCard component displays detailed information about a specific day's itinerary.
+ *
+ * @param {ExpandedItineraryCardProps} props - The component props
+ * @param {ItineraryItem} props.item - The itinerary item to display
+ * @param {() => void} props.onClose - Function to call when closing the expanded card
+ * @returns {JSX.Element} The rendered ExpandedItineraryCard component
+ */
+const ExpandedItineraryCard: React.FC<ExpandedItineraryCardProps> = ({
+  item,
+  onClose,
+}) => (
   <div className="bg-white rounded-lg shadow-lg p-8 h-full overflow-y-auto">
     <div className="flex justify-between items-center mb-6">
       <h3 className="text-4xl font-bold text-gray-800">Day {item.day}</h3>

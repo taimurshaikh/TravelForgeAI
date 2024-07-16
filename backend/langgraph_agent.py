@@ -29,16 +29,16 @@ class TravelForgeAgent:
         graph_builder.add_node("research", researcher.run)
         graph_builder.add_node("recommend", recommender.run)
         graph_builder.add_node("generate_itinerary", itinerary_generator.run)
-        graph_builder.add_node("formatter", formatter.run)
+        graph_builder.add_node("format", formatter.run)
 
         # Define the edges between the agents
         graph_builder.add_edge("research", "recommend")
         graph_builder.add_edge("recommend", "generate_itinerary")
-        graph_builder.add_edge("generate_itinerary", "formatter")
+        graph_builder.add_edge("generate_itinerary", "format")
 
         # Set up start and end nodes
         graph_builder.set_entry_point("research")
-        graph_builder.set_finish_point("formatter")
+        graph_builder.set_finish_point("format")
 
         # Compile the graph
         graph = graph_builder.compile()

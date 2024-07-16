@@ -1,6 +1,9 @@
 import numpy as np
+from dotenv import load_dotenv
 from scipy.optimize import linear_sum_assignment
 from thefuzz import fuzz
+
+load_dotenv()
 
 
 class FormatterAgent:
@@ -8,7 +11,7 @@ class FormatterAgent:
     This agent takes the generated itinerary and formats it into the final response format to be sent to the user.
     """
 
-    def match_names_to_urls(names: list, urls: list) -> dict:
+    def match_names_to_urls(self, names: list, urls: list) -> dict:
         """
         Matches names to URLs based on similarity scores using the Hungarian algorithm.
 
@@ -21,7 +24,7 @@ class FormatterAgent:
         """
         # Create a similarity score matrix
         score_matrix = np.zeros((len(names), len(urls)))
-
+        print("Score matrix: ", score_matrix)
         # Compute the similarity scores
         for i, name in enumerate(names):
             for j, url in enumerate(urls):
@@ -42,7 +45,7 @@ class FormatterAgent:
 
         return name_to_url_mapping
 
-    def remove_ids_from_itinerary_activities(itinerary: list) -> list:
+    def remove_ids_from_itinerary_activities(self, itinerary: list) -> list:
         """
         Removes 'id' keys from the activity recommendations in the itinerary.
 
@@ -57,13 +60,13 @@ class FormatterAgent:
                 del activity["id"]
         return itinerary
 
-    def run(self, complete_response: dict) -> dict:
+    def run(self, travel_info: dict) -> dict:
         """
         Formats the complete response by matching accommodation names to URLs and
         removing 'id' keys from itinerary activities.
 
         Args:
-            complete_response (dict): The complete response containing accommodation
+            travel_info (dict): The complete response containing accommodation
                                       recommendations and itinerary.
 
         Returns:
@@ -72,9 +75,10 @@ class FormatterAgent:
         try:
             # Match accommodation names to URLs
             accomm_name_url_mapping = self.match_names_to_urls(
-                [k["name"] for k in complete_response["accomm_recs"]],
-                complete_response["accomm_research_results"][0]["images"],
+                [k["name"] for k in travel_info["accomm_recs"]],
+                travel_info["accomm_research_results"]["images"],
             )
+            print("Did the mapping: ", accomm_name_url_mapping)
 
             # Format accommodation recommendations with image URLs
             formatted_accomm_recs = [
@@ -83,13 +87,17 @@ class FormatterAgent:
                     "link": k["link"],
                     "image": accomm_name_url_mapping[k["name"]],
                 }
-                for k in complete_response["accomm_recs"]
+                for k in travel_info["accomm_recs"]
             ]
+
+            print("Formatted Accommodation Recommendations: ", formatted_accomm_recs)
 
             # Remove 'id' keys from itinerary activities
             formatted_itinerary = self.remove_ids_from_itinerary_activities(
-                complete_response["itinerary"]
+                travel_info["itinerary"]
             )
+
+            print("Formatted Itinerary: ", formatted_itinerary)
 
             # Combine formatted accommodations and itinerary into the final response
             formatted_response = {
@@ -100,5 +108,68 @@ class FormatterAgent:
             return formatted_response
         except Exception as e:
             print("Error in FormatterAgent: ")
-            print(e)
+            print(e.args)
             raise e
+
+
+# # test data
+# complete_response = {
+#     "accomm_recs": [
+#         {
+#             "name": "Hotel de Crillon",
+#             "link": "https://www.rosewoodhotels.com/en/hotel-de-crillon",
+#         },
+#         {"name": "The Ritz Paris", "link": "https://www.ritzparis.com/en-GB"},
+#     ],
+#     "accomm_research_results": [
+#         {
+#             "images": [
+#                 "https://www.rosewoodhotels.com/en/hotel-de-crillon.jpg",
+#                 "https://www.ritzparis.com/en-GB.jpg",
+#             ]
+#         }
+#     ],
+#     "itinerary": [
+#         {
+#             "activity_recs": [
+#                 {
+#                     "id": 1,
+#                     "title": "Visit the Louvre Museum",
+#                     "description": "One of the world's largest art museum and a historic monument in Paris, France.",
+#                     "reasoning": "Based on user preferences and search results.",
+#                 },
+#                 {
+#                     "id": 2,
+#                     "title": "Explore the Eiffel Tower",
+#                     "description": "A wrought-iron lattice tower on the Champ de Mars in Paris, France.",
+#                     "reasoning": "Iconic landmark and popular tourist attraction.",
+#                 },
+#             ]
+#         },
+#         {
+#             "activity_recs": [
+#                 {
+#                     "id": 3,
+#                     "title": "Take a Seine River Cruise",
+#                     "description": "Enjoy a scenic cruise along the Seine River in Paris, France.",
+#                     "reasoning": "Relaxing way to see the city from a different perspective.",
+#                 },
+#                 {
+#                     "id": 4,
+#                     "title": "Visit Notre-Dame Cathedral",
+#                     "description": "A medieval Catholic cathedral on the Île de la Cité in Paris, France.",
+#                     "reasoning": "Historic and architectural significance.",
+#                 },
+#             ]
+#         },
+#     ],
+# }
+
+# # Initialize the FormatterAgent
+# formatter_agent = FormatterAgent()
+
+# # Format the complete response
+# formatted_response = formatter_agent.run(complete_response)
+
+# # Print the formatted response
+# print(formatted_response)

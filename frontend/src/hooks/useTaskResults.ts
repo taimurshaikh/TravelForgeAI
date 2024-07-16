@@ -2,6 +2,13 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { ApiResponse } from "types";
 
+/**
+ * Custom hook to fetch task results from the API.
+ *
+ * @param {string | undefined} taskId - The ID of the task to fetch results for
+ * @returns {{ loading: boolean, result: ApiResponse | null, error: string | null }}
+ *          An object containing the loading state, result data, and any error message
+ */
 const useTaskResults = (taskId: string | undefined) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [result, setResult] = useState<ApiResponse | null>(null);
@@ -14,6 +21,10 @@ const useTaskResults = (taskId: string | undefined) => {
       return;
     }
 
+    /**
+     * Fetches the task results from the API.
+     * Implements a polling mechanism for pending tasks.
+     */
     const fetchResults = async () => {
       try {
         const response = await axios.get<ApiResponse>(
@@ -24,7 +35,7 @@ const useTaskResults = (taskId: string | undefined) => {
           setResult(response.data);
           setLoading(false);
         } else if (response.data.state === "PENDING") {
-          setTimeout(fetchResults, 2000);
+          setTimeout(fetchResults, 2000); // Retry after 2 seconds
         } else {
           throw new Error("Task failed or not found");
         }
