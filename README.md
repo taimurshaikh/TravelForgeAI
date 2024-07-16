@@ -15,13 +15,13 @@ We use the [LangGraph Library](https://github.com/langchain-ai/langgraph) to des
 
 ## 🎥 Demo
 
-https://github.com/taimurshaikh/travelforge/assets/demo/travelforge-demo.mp4
+https://www.loom.com/share/bd4506ed6f394c45886ec034a04c2cda?sid=94765c4d-fd73-4c63-b33e-5993d3b4f613
 
 ## 🌟 Features
 
 - **Personalized Itineraries**: Create travel plans that align with your interests and preferences.
 - **Comprehensive Planning**: Includes details on attractions, accommodations, dining, and activities.
-- **Engaging Design**: Enjoy a visually appealing and well-organized itinerary layout.
+- **Engaging Design**: Enjoy a visually appealing and well-organized itinerary layout with expandable cards.
 - **Quality Assurance**: Iterative feedback and refinement ensure a satisfying travel plan.
 - **User-Friendly Interface**: Easy-to-use platform for setting preferences and generating itineraries.
 
@@ -60,16 +60,18 @@ You will need API keys from both [Tavily](https://tavily.com) and [OpenAI](https
    ```
 4. The app should now be running on `http://localhost:5173`.
 5. Start planning your next adventure ✈️ ✈️ ✈️!
+   Note: You should exit the app by pressing `Ctrl+D` in the terminal to stop the server and kill both frontend and backend tasks.
 
 ## 🛣️ Roadmap
 
 Checklist of features and functionalities that are planned for future releases. These will be turned into GitHub milestones in the future.
-[ ] **Docker Support**: Finish dockerizing the application for easy deployment and scaling.
-[ ] **Feedback Agent**: Collect user feedback on the itinerary and make adjustments based on the feedback.
-[ ] **Mapper**: Generate an interactive map of all the sites and activities in the itinerary for the user to explore.
-[ ] **Multi-User Support**: Allow multiple users to create and manage their travel itineraries.
-[ ] **Collaborative Planning**: Enable users to share and collaborate on travel plans with friends and family.
-[ ] **Mobile App**: Look into developing a mobile app version of TravelForge for on-the-go travel planning.
+
+- [ ] **Docker Support**: Finish dockerizing the application for easy deployment and scaling.
+- [ ] **Feedback Agent**: Collect user feedback on the itinerary and make adjustments based on the feedback.
+- [ ] **Mapper**: Generate an interactive map of all the sites and activities in the itinerary for the user to explore.
+- [ ] **Multi-User Support**: Allow multiple users to create and manage their travel itineraries.
+- [ ] **Collaborative Planning**: Enable users to share and collaborate on travel plans with friends and family.
+- [ ] **Mobile App**: Look into developing a mobile app version of TravelForge for on-the-go travel planning.
 
 ## ❗Known Issues
 
@@ -81,13 +83,13 @@ These will be migrated to the issues tab in the future.
 
 ## 🤝 Contributing
 
-Interested in contributing to TravelForge? We welcome contributions of all kinds! Check out our [Contributor's Guide](CONTRIBUTING.md) to get started.
+Contributing could be as simple as opening an issue to report a bug or request a new feature. If you would like to contribute to the codebase, please make a fork and open a pull request with your changes. We would love to see your contributions! As the project scales, we will be adding more detailed contribution guidelines.
 
 ## 📩 Contact Us
 
 For support or inquiries, please reach out to us:
 
-- [Email](mailto:taimurshaikh@example.com)
+- [Email](mailto:taimurshaikh2004@gmail.com)
 
 Join us in revolutionizing the travel planning experience with TravelForge!
 
@@ -98,4 +100,4 @@ Join us in revolutionizing the travel planning experience with TravelForge!
 [LangGraph](https://langchain-ai.github.io/langgraph/)
 [LangChain](https://www.langchain.com/)
 
-We would like to thank the team at Tavily for providing inspiration for this project as part of their take-home challenge.
+We would like to sincerely thank the team at Tavily for providing inspiration for this project as part of their take-home challenge.
