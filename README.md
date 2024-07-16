@@ -50,16 +50,24 @@ You will need API keys from both [Tavily](https://tavily.com) and [OpenAI](https
     TAVILY_API_KEY=<YOUR_TAVILY_API_KEY>
     OPENAI_API_KEY=<YOUR_OPENAI_API_KEY>
    ```
-3. The simplest way to start the app is to run the shell script in the root directory. First, ensure the script is executable:
+3. Install required packages for both the frontend and backend
    ```sh
-   chmod +x start.sh
+   cd frontend
+   npm install
+   cd ../backend
+   python -m venv venv && source venv/bin/activate
+   pip install -r requirements.txt
+   ```
+4. The simplest way to start the app is to run the shell script in the root directory. First, ensure the script is executable:
+   ```sh
+   chmod +x startup-script.sh
    ```
    Then run the script:
    ```sh
    ./startup-script.sh
    ```
-4. The app should now be running on `http://localhost:5173`.
-5. Start planning your next adventure ✈️ ✈️ ✈️!
+5. The app should now be running on `http://localhost:5173`.
+6. Start planning your next adventure ✈️ ✈️ ✈️!
    Note: You should exit the app by pressing `Ctrl+D` in the terminal to stop the server and kill both frontend and backend tasks.
 
 ## 🛣️ Roadmap
