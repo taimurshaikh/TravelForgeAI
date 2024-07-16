@@ -15,12 +15,7 @@ from agents import (
 
 
 class TravelForgeAgent:
-    def __init__(self):
-        self.output_dir = f"outputs/run_{int(time.time())}"
-        os.makedirs(self.output_dir, exist_ok=True)
-
     def run(self, user_form_submission: Dict[str, str]):
-        print("Running TravelForgeAgent...")
         # Initialize agents
         researcher = ResearcherAgent()
         recommender = RecommenderAgent()
@@ -51,9 +46,6 @@ class TravelForgeAgent:
         # Run the graph
         print("Running the graph with user form submission...", user_form_submission)
         res = graph.invoke(user_form_submission)
-
-        # Write the output to the output directory
-        with open(f"{self.output_dir}/output.json", "w") as f:
-            f.write(json.dumps(res, indent=4))
+        print("Graph run successfully!")
 
         return res

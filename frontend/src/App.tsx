@@ -14,6 +14,7 @@ const App: React.FC = () => {
         <div className="min-h-screen flex flex-col bg-gray-100">
           <Header />
           <main className="flex-grow items-center pb-8 px-4 max-w-7xl mx-auto w-full">
+            {/* There are two main routes in the app, each with their own component */}
             <Routes>
               <Route path="/" element={<ItineraryForm />} />
               <Route path="/results/:taskId" element={<ResultsPage />} />

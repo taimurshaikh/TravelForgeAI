@@ -1,5 +1,5 @@
 # Use the official Python image from the Docker Hub
-FROM python:3.12
+FROM python:3.12-alpine
 
 # Set the working directory
 WORKDIR /app
@@ -17,4 +17,4 @@ EXPOSE 8000
 ENV PYTHONUNBUFFERED=1
 
 # Run both the FastAPI server and the Celery worker
-CMD ["sh", "-c", "celery -A tasks.celery_app worker --loglevel=info & uvicorn main:app --host 0.0.0.0 --port 8000"]
+CMD ["uvicorn main:app --host 0.0.0.0 --port 8000 --reload"]

@@ -1,71 +1,96 @@
-from tavily import TavilyClient
-from concurrent.futures import ThreadPoolExecutor
 import os
-from dotenv import load_dotenv
 
+from dotenv import load_dotenv
+from tavily import TavilyClient
+
+from concurrent.futures import ThreadPoolExecutor
+
+# Load environment variables from a .env file
 load_dotenv()
+
+# Initialize the TavilyClient with the API key from environment variables
 tavily_client = TavilyClient(api_key=os.getenv("TAVILY_API_KEY"))
 
 
 class ResearcherAgent:
     """
-    This agent is responsible for conducting research using the Tavily API and returning a summary of its findings.
+    Conducts research using the Tavily API and returns a summary of findings.
     """
 
-    def research_location_activities(self, location_info: dict) -> dict:
-        # Use Tavily to run some search queries
+    def research_location_activities(self, user_prefs: dict) -> dict:
+        """
+        Research activities available at a given location.
+
+        Args:
+            user_prefs (dict): Information about the user's form submission
+
+        Returns:
+            dict: Results of the research on activities.
+        """
         search_queries = [
-            f"Top tourist attractions in {location_info['location']}",
-            f"Things to do in {location_info['location']} in {location_info['time_range']}",
+            f"Top tourist attractions in {user_prefs['location']}",
+            f"Things to do in {user_prefs['location']} in {user_prefs['time_range']}",
         ]
 
-        # Specific interests
-        for interest in location_info["interests"]:
+        # Add interest-based queries
+        for interest in user_prefs["interests"]:
             search_queries.append(
-                f"Best {location_info['budget']} {interest} in {location_info['location']}"
+                f"Best {user_prefs['budget']} {interest} in {user_prefs['location']}"
             )
 
+        # Perform concurrent searches
         with ThreadPoolExecutor() as executor:
             activity_results = list(
                 executor.map(
-                    # As a heuristic, we limit the number of results to a given threshold
-                    # This ensures variety but also doesn't provide too much noise for downstream agents
                     lambda q: tavily_client.search(
                         query=q,
                         search_depth="advanced",
-                        max_results=min(location_info["num_days"], 5),
+                        max_results=min(user_prefs["num_days"], 5),
                     ),
                     search_queries,
                 )
             )
+        # Extract and return the results
         return [r["results"] for r in activity_results]
 
-    def research_location_accomm(self, location_info: dict) -> dict:
-        # Static amount of accomodation results
-        accomm_results = (
-            tavily_client.search(
-                query=f"Best {location_info['budget']} {location_info['accomm_type']} in {location_info['location']}",
-                include_images=True,
-                max_results=3,
-            ),
+    def research_location_accomm(self, user_prefs: dict) -> dict:
+        """
+        Research accommodations available at a given location.
+
+        Args:
+            user_prefs (dict): Information about the user's form submission
+
+        Returns:
+            dict: Results of the research on accommodations.
+        """
+        accomm_results = tavily_client.search(
+            query=f"Best {user_prefs['budget']} {user_prefs['accomm_type']} in {user_prefs['location']}",
+            include_images=True,
+            max_results=3,
         )
 
         return accomm_results
 
     def run(self, user_prefs: dict):
+        """
+        Run the research process based on user preferences.
+
+        Args:
+            user_prefs (dict): User's submitted preferences.
+
+        Returns:
+            dict: Research results.
+        """
         try:
-            travel_info = {}
-            travel_info["user_form_submission"] = user_prefs
+            travel_info = {"user_form_submission": user_prefs}
             travel_info["activity_research_results"] = (
                 self.research_location_activities(user_prefs)
             )
             travel_info["accomm_research_results"] = self.research_location_accomm(
                 user_prefs
             )
-            print("Research results:")
-            print(travel_info["activity_research_results"])
-            print(travel_info["accomm_research_results"])
+            print("Research completed successfully!")
             return travel_info
         except Exception as e:
-            print(f"Error during research: {e}")
+            print("An error occurred during research:", e)
             raise e

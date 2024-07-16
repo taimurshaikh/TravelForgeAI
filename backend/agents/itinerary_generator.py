@@ -67,9 +67,8 @@ class ItineraryGeneratorAgent:
                 }
                 for itinerary_day in res
             ]
-            print("Itinerary:")
-            print(travel_info["itinerary"])
+            print(travel_info)
             return travel_info
         except Exception as e:
-            print(f"Error during itinerary generation: {e}")
+            print("Error in ItineraryGeneratorAgent: ", e)
             raise e
