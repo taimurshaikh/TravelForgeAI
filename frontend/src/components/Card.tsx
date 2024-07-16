@@ -13,7 +13,7 @@ const Card: React.FC<CardProps> = ({ title, content, onClick }) => {
       onClick={onClick}
     >
       <div className="p-6">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+        <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900">
           {title}
         </h5>
         <p className="font-normal text-gray-700">{content}</p>

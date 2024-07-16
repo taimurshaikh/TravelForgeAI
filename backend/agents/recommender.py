@@ -10,13 +10,13 @@ client = OpenAI()
 
 
 class RecommenderAgent:
-    def generate_recommendations(self, travel_info):
+    def generate_recs(self, travel_info):
         system_prompt = f"""
         You are a travel agent that excels at providing recommendations to clients.
         You will be given some data about a particular user looking to plan a travel itinerary and their preferences.
         I would like you to generate many recommendations based on the provided user's preferences.
         Please output your recommendations as a JSON object with two attributes. The first attribute should have
-        key 'activity_recommendations', which itself maps to a list of JSON objects (a list in this instance being enclosed by square brackets []) 
+        key 'activity_recs', which itself maps to a list of JSON objects (a list in this instance being enclosed by square brackets []) 
         where each JSON object represents a recommended thing the user should do. Each entry in the list should have the following structure:
         {{
           'id': A unique integer identifier for the recommendation
@@ -24,7 +24,7 @@ class RecommenderAgent:
           'description': An enticing description of the recommendation, e.g. 'One of the world's largest art museum and a historic monument in Paris, France.'
           'reasoning': A brief explanation of why this recommendation was made, potentially using the user's preferences or the search results in your response.
         }}
-        The second attribute should have the key 'accommodation_recommendations' which itself maps to a list of JSON objects (a list in this instance being enclosed by square brackets []) 
+        The second attribute should have the key 'accomm_recs' which itself maps to a list of JSON objects (a list in this instance being enclosed by square brackets []) 
         where each JSON object represents an accommodation parsed from the user's input. Each entry in the list should have the following structure:
         {{
             'name': The name of the accommodation, e.g. 'Hotel de Crillon'
@@ -40,7 +40,7 @@ class RecommenderAgent:
             I have gathered the following list of search queries and their respective search results for you use as context when generating recommendations
             for both activities and accommodation:\n 
             {travel_info['activity_research_results']}\n
-            {travel_info['accommodation_research_results']}
+            {travel_info['accomm_research_results']}
             """
 
         response = client.chat.completions.create(
@@ -62,12 +62,12 @@ class RecommenderAgent:
 
     def run(self, travel_info):
         try:
-            travel_info["activity_recommendations"] = json.loads(
-                self.generate_recommendations(travel_info)
-            )["activity_recommendations"]
-            travel_info["accommodation_recommendations"] = json.loads(
-                self.generate_recommendations(travel_info)
-            )["accommodation_recommendations"]
+            travel_info["activity_recs"] = json.loads(self.generate_recs(travel_info))[
+                "activity_recs"
+            ]
+            travel_info["accomm_recs"] = json.loads(self.generate_recs(travel_info))[
+                "accomm_recs"
+            ]
             return travel_info
         except Exception as e:
             print(f"Error during recommendation generation: {e}")

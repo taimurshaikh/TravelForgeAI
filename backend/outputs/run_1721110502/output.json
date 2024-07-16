@@ -1,0 +1,101 @@
+{
+    "accomm_recs": [
+        {
+            "name": "21c Museum Hotel",
+            "link": "https://wanderingwheatleys.com/best-boutique-hotels-cincinnati-ohio/",
+            "image": "https://boutiqueshotels.com/rsc/images/r1024x1024/5582/558234/558234849.JPEG"
+        },
+        {
+            "name": "The Kinley, a Tribute Portfolio Hotel",
+            "link": "https://www.marriott.com/en-us/hotels/cvgdw-the-kinley-cincinnati-downtown/",
+            "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/df/20/0d/main-entrance-to-hotel.jpg?w=900&h=-1&s=1"
+        },
+        {
+            "name": "The Lytle Park Hotel, Autograph Collection",
+            "link": "https://www.marriott.com/en-us/hotels/cvgly-the-lytle-park-hotel-autograph-collection/",
+            "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/e2/96/99/exterior.jpg?w=900&h=-1&s=1"
+        },
+        {
+            "name": "The Cincinnatian Hotel, Curio Collection by Hilton",
+            "link": "https://www.hilton.com/en/hotels/cvgcuci-the-cincinnatian-hotel/",
+            "image": "https://media-cdn.tripadvisor.com/media/photo-s/1c/dc/c2/cb/exterior.jpg"
+        },
+        {
+            "name": "Graduate Cincinnati",
+            "link": "https://www.graduatehotels.com/cincinnati/",
+            "image": "https://2486634c787a971a3554-d983ce57e4c84901daded0f67d5a004f.ssl.cf1.rackcdn.com/_kinley/media/1-kinley-cinci-5fbeb4e97ed7e.jpg"
+        }
+    ],
+    "itinerary": [
+        {
+            "day": 1,
+            "activity_recs": [
+                {
+                    "title": "Explore Eden Park",
+                    "description": "Experience the beauty of nature with serene walking trails and picturesque views at Eden Park, one of Cincinnati's most iconic parks.",
+                    "reasoning": "Eden Park is a top-rated attraction and aligns with your interest in parks. It offers a relaxing atmosphere perfect for a summer visit."
+                },
+                {
+                    "title": "Enjoy Cocktails at Somerset Bar",
+                    "description": "Relax at Somerset Bar, known for its chic atmosphere and signature cocktails crafted by expert mixologists.",
+                    "reasoning": "This bar is one of Cincinnati's favorites and offers a trendy setting, aligning with your interest in bars."
+                },
+                {
+                    "title": "Explore the Over-the-Rhine District",
+                    "description": "Wander through the historic Over-the-Rhine district, filled with charming bars, unique shops, and beautiful architecture.",
+                    "reasoning": "This district is known for its vibrant nightlife and cultural offerings, making it a must-visit to experience the local bar scene."
+                }
+            ]
+        },
+        {
+            "day": 2,
+            "activity_recs": [
+                {
+                    "title": "Visit Cincinnati Zoo & Botanical Garden",
+                    "description": "Discover an array of wildlife, from white Bengal tigers to lowland gorillas, and explore one of the world's largest insectariums at the Cincinnati Zoo & Botanical Garden.",
+                    "reasoning": "The zoo is one of the top attractions in Cincinnati and offers an engaging experience mixing nature and education, ideal for a summer day."
+                },
+                {
+                    "title": "Stroll Through Smale Riverfront Park",
+                    "description": "Enjoy scenic river views, interactive play areas, beautiful carousel, and fountains at Smale Riverfront Park.",
+                    "reasoning": "Smale Riverfront Park is highly recommended for its lively and engaging environment, making it an ideal spot for outdoor fun in the summer."
+                },
+                {
+                    "title": "Visit Mt. Airy Forest",
+                    "description": "Escape to the vast Mt. Airy Forest with hiking trails, mountain biking, a dog park, and a renowned 18-hole disc golf course.",
+                    "reasoning": "Mt. Airy Forest is one of the largest parks in Cincinnati and offers various outdoor activities, fitting your preference for park visits."
+                }
+            ]
+        },
+        {
+            "day": 3,
+            "activity_recs": [
+                {
+                    "title": "Experience Tech at the Cincinnati Museum Center",
+                    "description": "Discover the Union Terminal's technological exhibits and interactive STEM activities at the Cincinnati Museum Center.",
+                    "reasoning": "This recommendation targets your interest in technology with its diverse and hands-on exhibits, perfect for tech enthusiasts."
+                },
+                {
+                    "title": "Sip Craft Beers at Rhinegeist Brewery",
+                    "description": "Taste locally brewed craft beers and enjoy rooftop views at Rhinegeist Brewery, a staple in Cincinnati's brewery scene.",
+                    "reasoning": "Rhinegeist Brewery is a top pick in the local bar scene and fits your interest in exploring craft beers."
+                },
+                {
+                    "title": "Attend a FC Cincinnati Soccer Game",
+                    "description": "Catch the excitement of a FC Cincinnati soccer game and feel the adrenaline of live sports at TQL Stadium.",
+                    "reasoning": "Attending a FC Cincinnati game offers an energetic atmosphere, perfect for sports and entertainment during summer."
+                }
+            ]
+        },
+        {
+            "day": 4,
+            "activity_recs": [
+                {
+                    "title": "Discover Tech History at the American Sign Museum",
+                    "description": "Explore the fascinating history of American signage with vibrant, vintage signs and neon lights at the American Sign Museum.",
+                    "reasoning": "This museum combines technology and history, providing a unique and visually appealing experience that matches your interests."
+                }
+            ]
+        }
+    ]
+}

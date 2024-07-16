@@ -169,7 +169,7 @@
     "itinerary": [
         {
             "day": 1,
-            "recommended_activities": [
+            "activity_recs": [
                 {
                     "id": 1,
                     "title": "Visit the National Museum",
@@ -192,7 +192,7 @@
         },
         {
             "day": 2,
-            "recommended_activities": [
+            "activity_recs": [
                 {
                     "id": 3,
                     "title": "Explore Lodhi Garden",
@@ -215,7 +215,7 @@
         },
         {
             "day": 3,
-            "recommended_activities": [
+            "activity_recs": [
                 {
                     "id": 5,
                     "title": "Shop at Chandni Chowk",

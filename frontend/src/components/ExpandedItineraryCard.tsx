@@ -33,9 +33,8 @@ const ExpandedItineraryCard: React.FC<{
     <div>
       <h4 className="text-2xl font-semibold mb-4 text-gray-700">Activities:</h4>
       <ul className="space-y-4">
-        {item.recommended_activities &&
-        item.recommended_activities.length > 0 ? (
-          item.recommended_activities.map((activity, index) => (
+        {item.activity_recs && item.activity_recs.length > 0 ? (
+          item.activity_recs.map((activity, index) => (
             <li
               key={index}
               className="border-b border-gray-200 pb-4 last:border-b-0"

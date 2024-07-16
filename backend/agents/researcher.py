@@ -28,23 +28,23 @@ class ResearcherAgent:
         with ThreadPoolExecutor() as executor:
             activity_results = list(
                 executor.map(
-                    # As a heuristic, we limit the number of results for each to half the number of days in the trip
+                    # As a heuristic, we limit the number of results to a given threshold
                     # This ensures variety but also doesn't provide too much noise for downstream agents
                     lambda q: tavily_client.search(
                         query=q,
                         search_depth="advanced",
-                        max_results=location_info["num_days"] // 2,
+                        max_results=min(location_info["num_days"], 5),
                     ),
                     search_queries,
                 )
             )
         return [r["results"] for r in activity_results]
 
-    def research_location_accommodation(self, location_info: dict) -> dict:
+    def research_location_accomm(self, location_info: dict) -> dict:
         # Static amount of accomodation results
         accomm_results = (
             tavily_client.search(
-                query=f"Best {location_info['budget']} {location_info['accommodation_type']} in {location_info['location']}",
+                query=f"Best {location_info['budget']} {location_info['accomm_type']} in {location_info['location']}",
                 include_images=True,
                 max_results=3,
             ),
@@ -59,12 +59,12 @@ class ResearcherAgent:
             travel_info["activity_research_results"] = (
                 self.research_location_activities(user_prefs)
             )
-            travel_info["accommodation_research_results"] = (
-                self.research_location_accommodation(user_prefs)
+            travel_info["accomm_research_results"] = self.research_location_accomm(
+                user_prefs
             )
             print("Research results:")
             print(travel_info["activity_research_results"])
-            print(travel_info["accommodation_research_results"])
+            print(travel_info["accomm_research_results"])
             return travel_info
         except Exception as e:
             print(f"Error during research: {e}")

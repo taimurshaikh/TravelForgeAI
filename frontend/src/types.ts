@@ -7,29 +7,20 @@ export interface RecommendedActivity {
 
 export interface ItineraryItem {
   day: number;
-  recommended_activities: Array<RecommendedActivity>;
+  activity_recs: Array<RecommendedActivity>;
 }
 
 export interface Accommodation {
   name: string;
   link: string;
-  image_url: string | null;
+  image: string | null;
 }
 
 export interface ApiResponse {
   id: string;
   state: string;
   result: {
-    location: string;
-    time_range: string;
-    budget: string;
-    accommodation_type: string;
-    num_days: number;
-    interests: string[];
-    activity_recommendations: any[];
-    accommodation_recommendations: Accommodation[];
-    activity_research_results: any[];
-    accommodation_research_results: any[];
+    accomm_recs: Accommodation[];
     itinerary: ItineraryItem[];
   };
 }

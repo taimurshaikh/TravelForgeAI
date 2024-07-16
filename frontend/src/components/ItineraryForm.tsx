@@ -9,7 +9,7 @@ interface FormData {
   location: string;
   time_range: string;
   budget: string;
-  accommodation_type: string;
+  accomm_type: string;
   num_days: number;
   interests: string[];
 }
@@ -18,7 +18,7 @@ interface Errors {
   location?: string;
   time_range?: string;
   budget?: string;
-  accommodation_type?: string;
+  accomm_type?: string;
   num_days?: string;
   interests?: string;
   submit?: string;
@@ -29,7 +29,7 @@ const ItineraryForm: React.FC = () => {
     location: "",
     time_range: "",
     budget: "",
-    accommodation_type: "",
+    accomm_type: "",
     num_days: 0,
     interests: ["museums", "parks", "shopping"],
   });
@@ -75,8 +75,8 @@ const ItineraryForm: React.FC = () => {
     if (!formData.location) newErrors.location = "Location is required";
     if (!formData.time_range) newErrors.time_range = "Time range is required";
     if (!formData.budget) newErrors.budget = "Budget is required";
-    if (!formData.accommodation_type)
-      newErrors.accommodation_type = "Accommodation type is required";
+    if (!formData.accomm_type)
+      newErrors.accomm_type = "Accommodation type is required";
     if (formData.num_days <= 0)
       newErrors.num_days = "Number of days must be greater than 0";
     if (!formData.interests)
@@ -193,17 +193,17 @@ const ItineraryForm: React.FC = () => {
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="accommodation_type"
+            htmlFor="accomm_type"
           >
             Accommodation Type
           </label>
           <select
             className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-              errors.accommodation_type ? "border-red-500" : ""
+              errors.accomm_type ? "border-red-500" : ""
             }`}
-            id="accommodation_type"
-            name="accommodation_type"
-            value={formData.accommodation_type}
+            id="accomm_type"
+            name="accomm_type"
+            value={formData.accomm_type}
             onChange={handleChange}
           >
             <option value="">Select accommodation type</option>
@@ -213,10 +213,8 @@ const ItineraryForm: React.FC = () => {
             <option value="camping">Camping</option>
             <option value="resort">Resort</option>
           </select>
-          {errors.accommodation_type && (
-            <p className="text-red-500 text-xs italic">
-              {errors.accommodation_type}
-            </p>
+          {errors.accomm_type && (
+            <p className="text-red-500 text-xs italic">{errors.accomm_type}</p>
           )}
         </div>
 
@@ -236,7 +234,8 @@ const ItineraryForm: React.FC = () => {
             type="number"
             value={formData.num_days}
             onChange={handleChange}
-            placeholder="e.g., 7"
+            min="1"
+            placeholder="1"
           />
           {errors.num_days && (
             <p className="text-red-500 text-xs italic">{errors.num_days}</p>
@@ -270,13 +269,14 @@ const ItineraryForm: React.FC = () => {
 
         <div className="flex items-center justify-between">
           <button
-            className={`w-full px-8 py-2 rounded overflow-hidden border border-[#4E1A70] bg-slate-50 text-[#4E1A70] shadow-2xl
-          relative transition-all duration-500 ease-in-out hover:text-slate-50 group ${
-            isLoading ? "opacity-50 cursor-not-allowed" : ""
-          }`}
+            className={`w-full px-8 py-2 rounded overflow-hidden border border-blue-600 bg-white text-blue-600 shadow-2xl
+    relative transition-all duration-500 ease-in-out hover:text-white group ${
+      isLoading ? "opacity-50 cursor-not-allowed" : ""
+    }`}
             type="submit"
             disabled={isLoading}
           >
+            {/* NOTE: this is barely visible due to the speed of navigating to LoadingScreen */}
             <span className="relative z-10 text-base">
               {isLoading ? (
                 <span>
@@ -287,7 +287,7 @@ const ItineraryForm: React.FC = () => {
               )}
             </span>
             <div className="absolute inset-0 h-full w-full scale-0 rounded transition-all duration-300 group-hover:scale-100">
-              <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-[#4E1A70] to-[#2B4CF2]"></div>
+              <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400"></div>
             </div>
           </button>
         </div>

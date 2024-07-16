@@ -1,58 +1,20 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import { useParams } from "react-router-dom";
-import ItineraryCard from "./ItineraryCard";
-import AccommodationCard from "./AccommodationCard";
-import ExpandedAccommodationCard from "./ExpandedAccommodationCard";
-import ExpandedItineraryCard from "./ExpandedItineraryCard";
-import LoadingScreen from "./LoadingScreen";
-import ErrorScreen from "./ErrorScreen";
-import LoadingEllipsis from "./LoadingEllipsis";
-import { ApiResponse, ItineraryItem, Accommodation } from "../types";
+import ItineraryCard from "@components/ItineraryCard";
+import AccommodationCard from "@components/AccommodationCard";
+import ExpandedAccommodationCard from "@components/ExpandedAccommodationCard";
+import ExpandedItineraryCard from "@components/ExpandedItineraryCard";
+import LoadingScreen from "@components/LoadingScreen";
+import ErrorScreen from "@components/ErrorScreen";
+import useTaskResults from "@hooks/useTaskResults";
 
 const ResultsPage: React.FC = () => {
   const { taskId } = useParams<{ taskId: string }>();
-  const [loading, setLoading] = useState<boolean>(true);
-  const [result, setResult] = useState<ApiResponse | null>(null);
-  const [expandedDay, setExpandedDay] = useState<number | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [expandedAccommodation, setExpandedAccommodation] = useState<
+  const { loading, result, error } = useTaskResults(taskId);
+  const [expandedDay, setExpandedDay] = React.useState<number | null>(null);
+  const [expandedAccommodation, setExpandedAccommodation] = React.useState<
     string | null
   >(null);
-
-  useEffect(() => {
-    if (!taskId) return;
-
-    let isMounted = true;
-    const fetchResults = async () => {
-      try {
-        const response = await axios.get<ApiResponse>(
-          `http://127.0.0.1:8000/task-status/${taskId}`
-        );
-        if (!isMounted) return;
-
-        if (response.data.state === "SUCCESS") {
-          setResult(response.data);
-          setLoading(false);
-        } else if (response.data.state === "PENDING") {
-          setTimeout(fetchResults, 2000);
-        } else {
-          setError("Task failed or not found");
-          setLoading(false);
-        }
-      } catch (error) {
-        if (!isMounted) return;
-        setError("Error fetching task status. Please try again later.");
-        setLoading(false);
-      }
-    };
-
-    fetchResults();
-
-    return () => {
-      isMounted = false;
-    };
-  }, [taskId]);
 
   const handleCardClick = (day: number) => {
     setExpandedDay(day);
@@ -70,22 +32,15 @@ const ResultsPage: React.FC = () => {
   };
 
   if (loading) {
-    return (
-      <div className="w-full h-screen flex items-center justify-center bg-gray-50">
-        <p className="text-2xl font-semibold text-gray-800">
-          Loading itinerary
-          <LoadingEllipsis />
-        </p>
-      </div>
-    );
+    return <LoadingScreen />;
   }
 
   if (error) {
-    return (
-      <div className="w-full h-screen flex items-center justify-center bg-gray-50">
-        <p className="text-2xl font-semibold text-red-500">{error}</p>
-      </div>
-    );
+    return <ErrorScreen message={error} />;
+  }
+
+  if (!result) {
+    return <ErrorScreen message="No data available" />;
   }
 
   return (
@@ -115,14 +70,7 @@ const ResultsPage: React.FC = () => {
               Suggested Accommodations
             </h3>
             <div className="grid grid-cols-1 gap-6 mb-8">
-              {result?.result.accommodation_recommendations?.map(function (
-                accommodation,
-                index
-              ) {
-                accommodation.image_url =
-                  result?.result.accommodation_research_results[0].images[
-                    index
-                  ];
+              {result?.result.accomm_recs?.map((accommodation, index) => {
                 return (
                   <AccommodationCard
                     key={index}
@@ -145,11 +93,10 @@ const ResultsPage: React.FC = () => {
                 }
                 onClose={handleCardClose}
               />
-            ) : expandedAccommodation &&
-              result?.result.accommodation_recommendations ? (
+            ) : expandedAccommodation && result?.result.accomm_recs ? (
               <ExpandedAccommodationCard
                 accommodation={
-                  result.result.accommodation_recommendations.find(
+                  result.result.accomm_recs.find(
                     (item) => item.name === expandedAccommodation
                   )!
                 }

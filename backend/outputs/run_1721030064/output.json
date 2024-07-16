@@ -157,7 +157,7 @@
     "itinerary": [
         {
             "day": 1,
-            "recommended_activities": [
+            "activity_recs": [
                 {
                     "id": 1,
                     "title": "Visit Port Grand Pakistan",
@@ -180,7 +180,7 @@
         },
         {
             "day": 2,
-            "recommended_activities": [
+            "activity_recs": [
                 {
                     "id": 2,
                     "title": "Explore the Pakistan Maritime Museum",
@@ -203,7 +203,7 @@
         },
         {
             "day": 3,
-            "recommended_activities": [
+            "activity_recs": [
                 {
                     "id": 5,
                     "title": "Shop at The Forum Mall",

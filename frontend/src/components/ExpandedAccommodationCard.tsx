@@ -38,9 +38,9 @@ const ExpandedAccommodationCard: React.FC<ExpandedAccommodationCardProps> = ({
     {/* Image placeholder */}
     <div className="mb-6 overflow-hidden rounded-lg bg-gray-200">
       <div className="aspect-w-16 aspect-h-9 flex items-center justify-center">
-        {accommodation.image_url ? (
+        {accommodation.image ? (
           <img
-            src={accommodation.image_url}
+            src={accommodation.image}
             className="object-cover w-full h-full"
           />
         ) : (

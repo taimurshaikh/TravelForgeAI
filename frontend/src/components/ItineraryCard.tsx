@@ -12,8 +12,8 @@ const ItineraryCard: React.FC<ItineraryCardProps> = ({ item, onClick }) => {
     <Card
       title={`Day ${item.day}`}
       content={
-        item.recommended_activities
-          ? `${item.recommended_activities.length} activities planned`
+        item.activity_recs
+          ? `${item.activity_recs.length} activities planned`
           : "No activities planned"
       }
       onClick={onClick}

@@ -34,7 +34,7 @@ class ItineraryGeneratorAgent:
         user_prompt = f"""
             The user is travelling to {user_prefs['location']} for {user_prefs['num_days']} days during {user_prefs['time_range']}.
 
-            Here are the recommendations for the user's trip: {travel_info['activity_recommendations']}
+            Here are the recommendations for the user's trip: {travel_info['activity_recs']}
             """
 
         response = client.chat.completions.create(
@@ -59,9 +59,9 @@ class ItineraryGeneratorAgent:
             travel_info["itinerary"] = [
                 {
                     "day": itinerary_day["day"],
-                    "recommended_activities": [
+                    "activity_recs": [
                         rec
-                        for rec in travel_info["activity_recommendations"]
+                        for rec in travel_info["activity_recs"]
                         if rec["id"] in itinerary_day["recommended_activity_ids"]
                     ],
                 }

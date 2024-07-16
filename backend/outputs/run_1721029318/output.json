@@ -182,7 +182,7 @@
     "itinerary": [
         {
             "day": 1,
-            "recommended_activities": [
+            "activity_recs": [
                 {
                     "id": 1,
                     "title": "Explore Eden Park",
@@ -205,7 +205,7 @@
         },
         {
             "day": 2,
-            "recommended_activities": [
+            "activity_recs": [
                 {
                     "id": 4,
                     "title": "Spend a day at Summit Park in Blue Ash",
@@ -228,7 +228,7 @@
         },
         {
             "day": 3,
-            "recommended_activities": [
+            "activity_recs": [
                 {
                     "id": 3,
                     "title": "Walk through Spring Grove Cemetery & Arboretum",

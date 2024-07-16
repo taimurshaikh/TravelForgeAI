@@ -1,0 +1,316 @@
+{
+    "user_form_submission": {
+        "location": "New Orleans, Louisiana",
+        "time_range": "summer",
+        "budget": "medium",
+        "accommodation_type": "hotel",
+        "num_days": 3,
+        "interests": [
+            "museums",
+            "parks",
+            "shopping"
+        ]
+    },
+    "activity_research_results": [
+        [
+            {
+                "title": "29 Top-Rated Things to Do in New Orleans - U.S. News Travel",
+                "url": "https://travel.usnews.com/New_Orleans_LA/Things_To_Do/",
+                "content": "Guide to the best hotels and things to do in New Orleans. Maps, travel tips and more.",
+                "score": 0.98594,
+                "raw_content": null
+            },
+            {
+                "title": "17 Top-Rated Tourist Attractions in New Orleans, LA - PlanetWare",
+                "url": "https://www.planetware.com/tourist-attractions-/new-orleans-us-la-no.htm",
+                "content": "14. Audubon Aquarium of the Americas 15. Ride the Historic Streetcars 16. Jean Lafitte National Historical Park and Preserve 17. Crescent Park Where to Stay in New Orleans for Sightseeing Tips and Tours: How to Make the Most of Your Visit to New Orleans Map of Tourist Attractions in New Orleans, LA Best Time to Visit New Orleans, LA",
+                "score": 0.98237,
+                "raw_content": null
+            },
+            {
+                "title": "The 23 Best Things to Do in New Orleans - Cond\u00e9 Nast Traveler",
+                "url": "https://www.cntraveler.com/gallery/best-things-to-do-in-new-orleans",
+                "content": "Our top recommendations for the best things to do in New Orleans, Louisiana, with pictures and travel tips. Find fun things to do, best places to visit, unusual things to do, and more for couples ...",
+                "score": 0.97626,
+                "raw_content": null
+            }
+        ],
+        [
+            {
+                "title": "New Orleans Festivals - Summer Festivals",
+                "url": "https://www.neworleans.com/events/seasons/summer-festivals/",
+                "content": "New Orleans's summer festival season means Essence Fest, Southern Decadence, Satchmo Fest, the Louisiana Seafood Festival and more! Find the best places to fest in summer, here.",
+                "score": 0.98555,
+                "raw_content": null
+            },
+            {
+                "title": "2024 Guide to Summer Fun in New Orleans",
+                "url": "https://neworleansmom.com/guides-to-new-orleans/guide-to-summer-fun-in-new-orleans/",
+                "content": "There are so many things to do with kids in New Orleans this summer! Below are over 100 of our favorite ideas for every budget, interest and age for entertaining kids in New Orleans. A huge thanks to Louis Armstrong New Orleans International Airport, Love Swimming, Doris Schutte - REALTOR, and evamor artesian water for advertising in this guide.",
+                "score": 0.98114,
+                "raw_content": null
+            },
+            {
+                "title": "29 Top-Rated Things to Do in New Orleans - U.S. News Travel",
+                "url": "https://travel.usnews.com/New_Orleans_LA/Things_To_Do/",
+                "content": "What do riding the Steamboat Nachez and eating beignets at Cafe du Monde have in common? They're among the top-rated things to do in New Orleans, Louisiana.",
+                "score": 0.9784,
+                "raw_content": null
+            }
+        ],
+        [
+            {
+                "title": "The 13 Best Museums in New Orleans, Louisiana [2024] - Upgraded Points",
+                "url": "https://upgradedpoints.com/travel/best-museums-in-new-orleans/",
+                "content": "New Orleans is a popular tourist destination, but while most people know about the city's Mardi Gras celebrations and unique culture, not many know that NOLA has some world-class museums.",
+                "score": 0.98507,
+                "raw_content": null
+            },
+            {
+                "title": "9 Best Museums in New Orleans - Cond\u00e9 Nast Traveler",
+                "url": "https://www.cntraveler.com/gallery/best-museums-in-new-orleans",
+                "content": "Our top recommendations for the best museums in New Orleans, Louisiana, with pictures and travel tips. Find fun things to do, best places to visit, unusual things to do, and more for couples ...",
+                "score": 0.98329,
+                "raw_content": null
+            },
+            {
+                "title": "18 Must-Visit Museums in New Orleans - New Orleans Travel Tips",
+                "url": "https://neworleanstraveltips.com/guide-to-museums-in-new-orleans/",
+                "content": "Discover the cultural richness of New Orleans with our guide to the city's top museums. From world-class art collections to immersive historical exhibits, explore the best museums that showcase the vibrant heritage and diverse influences of the Crescent City.",
+                "score": 0.97975,
+                "raw_content": null
+            }
+        ],
+        [
+            {
+                "title": "THE 10 BEST New Orleans Parks (Updated 2024) - Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attractions-g60864-Activities-c57-t70-New_Orleans_Louisiana.html",
+                "content": "1. A pretty place, but currently a work in progress. Located in the West Bank neighborhood of Tall Timbers-Brechtel, this quiet park feels worlds away from the bustle of the French Quarter and Central Business District of New Orleans.",
+                "score": 0.98594,
+                "raw_content": null
+            },
+            {
+                "title": "Top 10 Parks to Visit and Tour Around in NOLA | Where Y'at New Orleans",
+                "url": "https://www.whereyat.com/best-new-orleans-parks",
+                "content": "10 Must-See Parks in NOLA. 1. Audubon Park. 6500 Magazine St., (504) 861-2537. audubonnatureinstitute.org. One of the most, if not most, well-known park in New Orleans, Audubon Park occupies around 350 acres of land in Uptown, New Orleans. The park includes a 1.8-mile paved walking and biking path, a gulf course, play areas, picnic seating, a ...",
+                "score": 0.98293,
+                "raw_content": null
+            },
+            {
+                "title": "THE 10 BEST New Orleans Parks & Nature Attractions - Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attractions-g60864-Activities-c57-New_Orleans_Louisiana.html",
+                "content": "You can do a self guided tour of the gardens, which are quite lovely and have several impressive water features, as w... 7. New Orleans Musical Legends Park. Sit among the statues of some great musicians while enjoying a drink from Cafe Beignet and enjoying the music.",
+                "score": 0.98029,
+                "raw_content": null
+            }
+        ],
+        [
+            {
+                "title": "10 best places to shop in New Orleans, ranked by local shopping expert",
+                "url": "https://10best.usatoday.com/destinations/louisiana/new-orleans/shopping/best-shopping/",
+                "content": "Shopping and travel are a perfect partnership. For travelers, shopping is a way to connect to the local culture, meet \"real\" people, access handcrafted art and cultural tradition. In New Orleans, a hotbed of self-expression since the U.S. shopped Louisiana out from under France for $15 million in 1803, shopping oils our city's economy, creates jobs and deepens a visitor's experience in a ...",
+                "score": 0.98586,
+                "raw_content": null
+            },
+            {
+                "title": "Where to go shopping in New Orleans - Time Out",
+                "url": "https://www.timeout.com/new-orleans/things-to-do/best-shopping-in-new-orleans",
+                "content": "For the best shopping in New Orleans, head to these unique neighborhoods, markets and shops, and be sure to shop local.",
+                "score": 0.98183,
+                "raw_content": null
+            },
+            {
+                "title": "The 10 best malls and shopping centers in New Orleans, ranked",
+                "url": "https://10best.usatoday.com/destinations/louisiana/new-orleans/shopping/shopping-centers-districts/",
+                "content": "Shoppers that are brand loyal can venture out of New Orleans' world of funky and independently owned boutiques to find scads of designer names and familiar chains at these 10 shopping areas. Greater New Orleans is home to plenty of indoor shopping havens to please the discriminating buyer. Check out the following list to see which malls to visit, and how close they are to downtown New Orleans ...",
+                "score": 0.97964,
+                "raw_content": null
+            }
+        ]
+    ],
+    "accommodation_research_results": [
+        {
+            "query": "Best medium hotel in New Orleans, Louisiana",
+            "follow_up_questions": null,
+            "answer": null,
+            "images": [
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/01/c9/95/exterior.jpg?w=900&h=-1&s=1",
+                "https://media.boutiquehotel.me/hotel/cover/59171_1617071551.jpg",
+                "https://cache.marriott.com/marriottassets/marriott/MSYQF/msyqf-exterior-9014-hor-wide.jpg?downsize=1440px:*",
+                "https://media.timeout.com/images/103815543/1372/1029/image.jpg",
+                "https://i0.wp.com/files.tripstodiscover.com/files/2016/10/Ritz-Carlton-New-Orleans.jpeg?resize=1568,1176"
+            ],
+            "results": [
+                {
+                    "title": "The Best Hotels in New Orleans of 2024 - Travel + Leisure",
+                    "url": "https://www.travelandleisure.com/best-hotels-in-new-orleans-8609162",
+                    "content": "Lydia Mansel. Published on March 15, 2024. Photo: Hotel Saint Vincent. While it has a reputation for live music, parades, and general merriment, New Orleans has a complex identity that blatantly ...",
+                    "score": 0.98555,
+                    "raw_content": null
+                },
+                {
+                    "title": "The 18 best hotels in New Orleans - The Points Guy",
+                    "url": "https://thepointsguy.com/guide/best-hotels-in-new-orleans/",
+                    "content": "Book one of three suites named after former presidents Dwight D. Eisenhower, Harry S. Truman and Franklin D. Roosevelt to enjoy extras like a spacious terrace, a kitchenette, a soaking tub and an entrance foyer. Rates at The Higgins Hotel New Orleans start at $175 or 50,000 Hilton Honors points per night.",
+                    "score": 0.98173,
+                    "raw_content": null
+                },
+                {
+                    "title": "21 Best Hotels in New Orleans - Cond\u00e9 Nast Traveler",
+                    "url": "https://www.cntraveler.com/gallery/best-hotels-in-new-orleans",
+                    "content": "The New Orleans outpost of Virgin Hotels opened in 2021, a welcome addition to the Central Business District's steadily-increasing portfolio of stylish, smaller hotels.",
+                    "score": 0.97847,
+                    "raw_content": null
+                }
+            ],
+            "response_time": 0.97
+        }
+    ],
+    "activity_recommendations": [
+        {
+            "id": 1,
+            "title": "Visit the Audubon Aquarium of the Americas",
+            "description": "Explore marine exhibits and encounter diverse aquatic species at this renowned aquarium, perfect for family fun.",
+            "reasoning": "Audubon Aquarium is one of the top-rated tourist attractions in New Orleans and a great indoor activity for a summer day."
+        },
+        {
+            "id": 2,
+            "title": "Ride the Historic Streetcars",
+            "description": "Take a scenic ride through the historic parts of New Orleans on one of its iconic streetcars.",
+            "reasoning": "Riding historical streetcars is a unique way to experience New Orleans' charm and heritage."
+        },
+        {
+            "id": 3,
+            "title": "Explore Jean Lafitte National Historical Park and Preserve",
+            "description": "Delve into the natural beauty and historical significance of this park, featuring swamps, marshes, and battle sites.",
+            "reasoning": "Ideal for nature lovers, this park offers a variety of outdoor activities such as hiking and historical exploration."
+        },
+        {
+            "id": 4,
+            "title": "Relax at Crescent Park",
+            "description": "Enjoy panoramic views of the Mississippi River in this beautiful park, ideal for a leisurely day out.",
+            "reasoning": "Crescent Park provides a serene outdoor retreat, making it a great option for a relaxing summer day."
+        },
+        {
+            "id": 5,
+            "title": "Attend Essence Fest",
+            "description": "Celebrate African American culture and music at one of the most vibrant festivals of the year.",
+            "reasoning": "Essence Fest is a cornerstone of New Orleans' summer festival season, perfect for experiencing local culture."
+        },
+        {
+            "id": 6,
+            "title": "Discover the New Orleans Museum of Art",
+            "description": "Explore an extensive collection of fine arts, from European paintings to contemporary works.",
+            "reasoning": "A must-visit for art enthusiasts, this museum offers a deep dive into artistic masterpieces in a cool indoor setting."
+        },
+        {
+            "id": 7,
+            "title": "Stroll through Audubon Park",
+            "description": "Spend a relaxing day walking or biking through this massive park, complete with picnic areas and golf courses.",
+            "reasoning": "Audubon Park's vast green spaces make it a perfect spot for outdoor activities and relaxation."
+        },
+        {
+            "id": 8,
+            "title": "Shop at the French Market",
+            "description": "Browse a mix of food, craft, and flea market stalls at this historic and lively market.",
+            "reasoning": "The French Market is ideal for shopping enthusiasts wanting to explore local vendors and unique finds."
+        },
+        {
+            "id": 9,
+            "title": "Tour the National WWII Museum",
+            "description": "Learn about the history and impact of World War II through interactive exhibits and artifacts.",
+            "reasoning": "Ranked among the best museums in New Orleans, this museum offers enriching educational experiences."
+        },
+        {
+            "id": 10,
+            "title": "Attend the Louisiana Seafood Festival",
+            "description": "Feast on delicious seafood while enjoying music and fun activities at this famous summer festival.",
+            "reasoning": "A quintessential New Orleans experience, perfect for food lovers looking to indulge in local cuisine."
+        }
+    ],
+    "accommodation_recommendations": [
+        {
+            "name": "The Higgins Hotel New Orleans",
+            "link": "https://thepointsguy.com/guide/best-hotels-in-new-orleans/"
+        },
+        {
+            "name": "Hotel Saint Vincent",
+            "link": "https://www.travelandleisure.com/best-hotels-in-new-orleans-8609162"
+        },
+        {
+            "name": "Virgin Hotels New Orleans",
+            "link": "https://www.cntraveler.com/gallery/best-hotels-in-new-orleans"
+        }
+    ],
+    "itinerary": [
+        {
+            "day": 1,
+            "activity_recs": [
+                {
+                    "id": 1,
+                    "title": "Visit the Audubon Aquarium of the Americas",
+                    "description": "Explore marine exhibits and encounter diverse aquatic species at this renowned aquarium, perfect for family fun.",
+                    "reasoning": "Audubon Aquarium is one of the top-rated tourist attractions in New Orleans and a great indoor activity for a summer day."
+                },
+                {
+                    "id": 5,
+                    "title": "Attend Essence Fest",
+                    "description": "Celebrate African American culture and music at one of the most vibrant festivals of the year.",
+                    "reasoning": "Essence Fest is a cornerstone of New Orleans' summer festival season, perfect for experiencing local culture."
+                },
+                {
+                    "id": 6,
+                    "title": "Discover the New Orleans Museum of Art",
+                    "description": "Explore an extensive collection of fine arts, from European paintings to contemporary works.",
+                    "reasoning": "A must-visit for art enthusiasts, this museum offers a deep dive into artistic masterpieces in a cool indoor setting."
+                }
+            ]
+        },
+        {
+            "day": 2,
+            "activity_recs": [
+                {
+                    "id": 2,
+                    "title": "Ride the Historic Streetcars",
+                    "description": "Take a scenic ride through the historic parts of New Orleans on one of its iconic streetcars.",
+                    "reasoning": "Riding historical streetcars is a unique way to experience New Orleans' charm and heritage."
+                },
+                {
+                    "id": 7,
+                    "title": "Stroll through Audubon Park",
+                    "description": "Spend a relaxing day walking or biking through this massive park, complete with picnic areas and golf courses.",
+                    "reasoning": "Audubon Park's vast green spaces make it a perfect spot for outdoor activities and relaxation."
+                },
+                {
+                    "id": 8,
+                    "title": "Shop at the French Market",
+                    "description": "Browse a mix of food, craft, and flea market stalls at this historic and lively market.",
+                    "reasoning": "The French Market is ideal for shopping enthusiasts wanting to explore local vendors and unique finds."
+                }
+            ]
+        },
+        {
+            "day": 3,
+            "activity_recs": [
+                {
+                    "id": 3,
+                    "title": "Explore Jean Lafitte National Historical Park and Preserve",
+                    "description": "Delve into the natural beauty and historical significance of this park, featuring swamps, marshes, and battle sites.",
+                    "reasoning": "Ideal for nature lovers, this park offers a variety of outdoor activities such as hiking and historical exploration."
+                },
+                {
+                    "id": 9,
+                    "title": "Tour the National WWII Museum",
+                    "description": "Learn about the history and impact of World War II through interactive exhibits and artifacts.",
+                    "reasoning": "Ranked among the best museums in New Orleans, this museum offers enriching educational experiences."
+                },
+                {
+                    "id": 10,
+                    "title": "Attend the Louisiana Seafood Festival",
+                    "description": "Feast on delicious seafood while enjoying music and fun activities at this famous summer festival.",
+                    "reasoning": "A quintessential New Orleans experience, perfect for food lovers looking to indulge in local cuisine."
+                }
+            ]
+        }
+    ]
+}
