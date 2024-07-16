@@ -12,4 +12,25 @@ module.exports = {
     },
   },
   plugins: [],
+  safelist: [
+    {
+      pattern: /bg-.*/,      
+    },
+    {
+      pattern: /text-.*/,      
+    },
+    {
+      pattern: /border-.*/,      
+    },
+    // Add more patterns here for from, via, to, etc.
+    {
+      pattern: /from-.*/,
+    },
+    {
+      pattern: /via-.*/,
+    },
+    {
+      pattern: /to-.*/,
+    }
+  ],
 }

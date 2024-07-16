@@ -13,9 +13,7 @@ const Card: React.FC<CardProps> = ({ title, content, onClick }) => {
       onClick={onClick}
     >
       <div className="p-6">
-        <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900">
-          {title}
-        </h5>
+        <h5 className="mb-2 text-2xl tracking-tight text-gray-900">{title}</h5>
         <p className="font-normal text-gray-700">{content}</p>
       </div>
       <div className="absolute top-2 right-2 text-gray-400 hover:text-blue-500 transition-colors duration-200">

@@ -7,6 +7,7 @@ import ExpandedItineraryCard from "@components/ExpandedItineraryCard";
 import LoadingScreen from "@components/LoadingScreen";
 import ErrorScreen from "@components/ErrorScreen";
 import useTaskResults from "@hooks/useTaskResults";
+import { StylizedButton } from "./StylizedButton";
 
 const ResultsPage: React.FC = () => {
   const { taskId } = useParams<{ taskId: string }>();
@@ -46,13 +47,20 @@ const ResultsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 p-8">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-gray-800 mb-8">
-          Your Itinerary
-        </h2>
+        <div className="flex flex-row justify-between">
+          <h2 className="text-3xl font-bold text-gray-800 mb-8">
+            Your Itinerary
+          </h2>
+          <StylizedButton
+            text="Generate Map"
+            color="violet"
+            extraClasses="px-8 py-2 h-12"
+          />
+        </div>
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Left sector: Itinerary content and Accommodation */}
           <div className="w-full lg:w-1/2 overflow-y-auto">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">
               Daily Schedule
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -66,7 +74,7 @@ const ResultsPage: React.FC = () => {
                 );
               })}
             </div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">
               Suggested Accommodations
             </h3>
             <div className="grid grid-cols-1 gap-6 mb-8">

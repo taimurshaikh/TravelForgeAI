@@ -1,9 +1,9 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import LoadingEllipsis from "./LoadingEllipsis";
 
 import BudgetSelector from "./BudgetSelector";
+import { StylizedButton } from "./StylizedButton";
 
 interface FormData {
   location: string;
@@ -31,7 +31,7 @@ const ItineraryForm: React.FC = () => {
     budget: "",
     accomm_type: "",
     num_days: 0,
-    interests: ["museums", "parks", "shopping"],
+    interests: ["", "", ""],
   });
   const [errors, setErrors] = useState<Errors>({});
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -53,7 +53,7 @@ const ItineraryForm: React.FC = () => {
 
   const handleInterestChange = (index: number, value: string) => {
     const newInterests = [...formData.interests];
-    newInterests[index] = value.trim();
+    newInterests[index] = value;
     setFormData((prev) => ({ ...prev, interests: newInterests }));
   };
 
@@ -62,7 +62,7 @@ const ItineraryForm: React.FC = () => {
       case "$":
         return "cheap";
       case "$$":
-        return "medium";
+        return "medium price";
       case "$$$":
         return "luxury";
       default:
@@ -268,28 +268,11 @@ const ItineraryForm: React.FC = () => {
         )}
 
         <div className="flex items-center justify-between">
-          <button
-            className={`w-full px-8 py-2 rounded overflow-hidden border border-blue-600 bg-white text-blue-600 shadow-2xl
-    relative transition-all duration-500 ease-in-out hover:text-white group ${
-      isLoading ? "opacity-50 cursor-not-allowed" : ""
-    }`}
-            type="submit"
-            disabled={isLoading}
-          >
-            {/* NOTE: this is barely visible due to the speed of navigating to LoadingScreen */}
-            <span className="relative z-10 text-base">
-              {isLoading ? (
-                <span>
-                  Generating <LoadingEllipsis />
-                </span>
-              ) : (
-                "Generate Itinerary"
-              )}
-            </span>
-            <div className="absolute inset-0 h-full w-full scale-0 rounded transition-all duration-300 group-hover:scale-100">
-              <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400"></div>
-            </div>
-          </button>
+          <StylizedButton
+            text="Generate Itinerary"
+            color="blue"
+            extraClasses="w-full px-8 py-2"
+          />
         </div>
       </main>
     </form>

@@ -5,6 +5,7 @@ import ResultsPage from "@components/ResultsPage";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import ErrorBoundary from "@components/ErrorBoundary";
+import { MapContainer } from "@components/MapContainer";
 
 const App: React.FC = () => {
   return (
@@ -12,10 +13,11 @@ const App: React.FC = () => {
       <Router>
         <div className="min-h-screen flex flex-col bg-gray-100">
           <Header />
-          <main className="flex-grow pt-24 pb-8 px-4 max-w-7xl mx-auto w-full">
+          <main className="flex-grow items-center pb-8 px-4 max-w-7xl mx-auto w-full">
             <Routes>
               <Route path="/" element={<ItineraryForm />} />
               <Route path="/results/:taskId" element={<ResultsPage />} />
+              {/* <Route path="/map" element={<MapContainer />} /> */}
             </Routes>
           </main>
           <Footer />
