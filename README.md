@@ -75,6 +75,10 @@ Checklist of features and functionalities that are planned for future releases. 
 
 These will be migrated to the issues tab in the future.
 
+- **Docker Support**: Docker support is still a work in progress. There is an open bug with the frontend Dockerfile not including the packages for building to all targets (see [this issue](https://github.com/vitejs/vite/discussions/15532))that needs to be resolved.
+- **Accomodation Images**: The current algorithm for matching the images returned by the Researcher's Tavily Request to the accomodations is a heuristic, and sometimes leads to incorrect images being displayed for a given accomodation.
+- **Days with No Activities**: Depending on the OpenAI call, there may be days where no activities are suggested. This is a known issue and will be addressed in future releases.
+
 ## 🤝 Contributing
 
 Interested in contributing to TravelForge? We welcome contributions of all kinds! Check out our [Contributor's Guide](CONTRIBUTING.md) to get started.
@@ -86,3 +90,12 @@ For support or inquiries, please reach out to us:
 - [Email](mailto:taimurshaikh@example.com)
 
 Join us in revolutionizing the travel planning experience with TravelForge!
+
+## 🙏 Sources and Acknowledgements
+
+[Tavily](https://tavily.com)
+[OpenAI](https://openai.com)
+[LangGraph](https://langchain-ai.github.io/langgraph/)
+[LangChain](https://www.langchain.com/)
+
+We would like to thank the team at Tavily for providing inspiration for this project as part of their take-home challenge.
